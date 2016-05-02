@@ -18,7 +18,7 @@ Microsoft Visual Studio Code 中文手册
 
 ####文件命名规则
 
-- 文件名为[Visual Studio Code Docs](https://code.visualstudio.com/docs) 对应文章超链接中 `/docs/` 后的部分。所有的空格都按连接上的格式删除，`注意单词首字母大写。`
+- 文件名为[Visual Studio Code Docs](https://code.visualstudio.com/docs) 对应文章标题（即下面列出的目录）的`翻译名称（原英文名）`。所有的空格都用 `-` 代替，`注意单词首字母大写。`
 - 对于下级子页面文档，将其放在以父级文档名称命名的文件夹下面。
 
 例如：`https://code.visualstudio.com/docs/editor/whyvscode` 这篇文档，对应 `editor` 这个文件夹下的 `WhyVsCode.md` 文件。
