@@ -133,6 +133,7 @@ Microsoft Visual Studio Code 中文手册
 ## 贡献者（按参与时间排序）
 
 - [Jeason](http://jeasonstudio.github.io/)
+- [swizard](http://swizardlv.github.io/)
 - 你的名字
 
 （Fork 之后自行添加到最后）
