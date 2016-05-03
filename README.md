@@ -63,69 +63,69 @@ Microsoft Visual Studio Code 中文手册
 * [Overview](https://code.visualstudio.com/docs)
 
 * EDITOR
-	* [Setup](https://code.visualstudio.com/docs/editor/setup)
-	* [The Basics](https://code.visualstudio.com/docs/editor/codebasics)
-	* [Extension Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery)
-	* [Editing Evolved](https://code.visualstudio.com/docs/editor/editingevolved)
-	* [Version Control](https://code.visualstudio.com/docs/editor/versioncontrol)
-	* [Debugging](https://code.visualstudio.com/docs/editor/debugging)
-	* [Tasks](https://code.visualstudio.com/docs/editor/tasks)
-	* [Accessibility](https://code.visualstudio.com/docs/editor/accessibility)
-	* [Why Vs Code](https://code.visualstudio.com/docs/editor/whyvscode)
-	
+  * ~~[Setup](https://code.visualstudio.com/docs/editor/setup)~~
+  * [The Basics](https://code.visualstudio.com/docs/editor/codebasics)
+  * [Extension Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery)
+  * [Editing Evolved](https://code.visualstudio.com/docs/editor/editingevolved)
+  * [Version Control](https://code.visualstudio.com/docs/editor/versioncontrol)
+  * [Debugging](https://code.visualstudio.com/docs/editor/debugging)
+  * [Tasks](https://code.visualstudio.com/docs/editor/tasks)
+  * [Accessibility](https://code.visualstudio.com/docs/editor/accessibility)
+  * [Why Vs Code](https://code.visualstudio.com/docs/editor/whyvscode)
+
 * CUSTOMIZATION
-	* [Overview](https://code.visualstudio.com/docs/customization/overview)
-	* [User and Workspace Settings](https://code.visualstudio.com/docs/customization/userandworkspace)
-	* [Key Bindings](https://code.visualstudio.com/docs/customization/keybindings)
-	* [Snippets](https://code.visualstudio.com/docs/customization/userdefinedsnippets)
-	* [Colorizer](https://code.visualstudio.com/docs/customization/colorizer)
-	* [Themes](https://code.visualstudio.com/docs/customization/themes)
-	* [Display Language](https://code.visualstudio.com/docs/customization/locales)
-	
+  * [Overview](https://code.visualstudio.com/docs/customization/overview)
+  * [User and Workspace Settings](https://code.visualstudio.com/docs/customization/userandworkspace)
+  * [Key Bindings](https://code.visualstudio.com/docs/customization/keybindings)
+  * [Snippets](https://code.visualstudio.com/docs/customization/userdefinedsnippets)
+  * [Colorizer](https://code.visualstudio.com/docs/customization/colorizer)
+  * [Themes](https://code.visualstudio.com/docs/customization/themes)
+  * [Display Language](https://code.visualstudio.com/docs/customization/locales)
+
 * LANGUAGES
-	* [Overview](https://code.visualstudio.com/docs/languages/overview)
-	* [JavaScript](https://code.visualstudio.com/docs/languages/javascript)
-	* [C#](https://code.visualstudio.com/docs/languages/csharp)
-	* [C++](https://code.visualstudio.com/docs/languages/cpp)
-	* [JSON](https://code.visualstudio.com/docs/languages/json)
-	* [HTML](https://code.visualstudio.com/docs/languages/html)
-	* [PHP](https://code.visualstudio.com/docs/languages/php)
-	* [Markdown](https://code.visualstudio.com/docs/languages/markdown)
-	* [TypeScript](https://code.visualstudio.com/docs/languages/typescript)
-	* [CSS, Sass and Less](https://code.visualstudio.com/docs/languages/css)
-	* [Dockerfile](https://code.visualstudio.com/docs/languages/dockerfile)
+  * [Overview](https://code.visualstudio.com/docs/languages/overview)
+  * [JavaScript](https://code.visualstudio.com/docs/languages/javascript)
+  * [C#](https://code.visualstudio.com/docs/languages/csharp)
+  * [C++](https://code.visualstudio.com/docs/languages/cpp)
+  * [JSON](https://code.visualstudio.com/docs/languages/json)
+  * [HTML](https://code.visualstudio.com/docs/languages/html)
+  * [PHP](https://code.visualstudio.com/docs/languages/php)
+  * [Markdown](https://code.visualstudio.com/docs/languages/markdown)
+  * [TypeScript](https://code.visualstudio.com/docs/languages/typescript)
+  * [CSS, Sass and Less](https://code.visualstudio.com/docs/languages/css)
+  * [Dockerfile](https://code.visualstudio.com/docs/languages/dockerfile)
 
 * RUNTIMES
-	* [Node.js](https://code.visualstudio.com/docs/runtimes/nodejs)
-	* [ASP.NET Core](https://code.visualstudio.com/docs/runtimes/ASPnet5)
-	* [Unity](https://code.visualstudio.com/docs/runtimes/unity)
-	* [Office](https://code.visualstudio.com/docs/runtimes/office)
+  * [Node.js](https://code.visualstudio.com/docs/runtimes/nodejs)
+  * [ASP.NET Core](https://code.visualstudio.com/docs/runtimes/ASPnet5)
+  * [Unity](https://code.visualstudio.com/docs/runtimes/unity)
+  * [Office](https://code.visualstudio.com/docs/runtimes/office)
 
 * EXTENSIONS
-	* [Overview](https://code.visualstudio.com/docs/extensions/overview)
-	* [Example - Hello World](https://code.visualstudio.com/docs/extensions/example-hello-world)
-	* [Example - Word Count](https://code.visualstudio.com/docs/extensions/example-word-count)
-	* [Example - Language Server](https://code.visualstudio.com/docs/extensions/example-language-server)
-	* [Example - Debuggers](https://code.visualstudio.com/docs/extensions/example-debuggers)
-	* [Principles and Patterns](https://code.visualstudio.com/docs/extensions/patterns-and-principles)
-	* [Running and Debugging Your Extension](https://code.visualstudio.com/docs/extensions/debugging-extensions)
-	* [Installing Extensions](https://code.visualstudio.com/docs/extensions/install-extension)
-	* [Testing Extension](https://code.visualstudio.com/docs/extensions/testing-extensions)
-	* [Our Approach](https://code.visualstudio.com/docs/extensions/our-approach)
+  * [Overview](https://code.visualstudio.com/docs/extensions/overview)
+  * [Example - Hello World](https://code.visualstudio.com/docs/extensions/example-hello-world)
+  * [Example - Word Count](https://code.visualstudio.com/docs/extensions/example-word-count)
+  * [Example - Language Server](https://code.visualstudio.com/docs/extensions/example-language-server)
+  * [Example - Debuggers](https://code.visualstudio.com/docs/extensions/example-debuggers)
+  * [Principles and Patterns](https://code.visualstudio.com/docs/extensions/patterns-and-principles)
+  * [Running and Debugging Your Extension](https://code.visualstudio.com/docs/extensions/debugging-extensions)
+  * [Installing Extensions](https://code.visualstudio.com/docs/extensions/install-extension)
+  * [Testing Extension](https://code.visualstudio.com/docs/extensions/testing-extensions)
+  * [Our Approach](https://code.visualstudio.com/docs/extensions/our-approach)
 
 * EXTENSIBILITY REFERENCE
-	* [Overview](https://code.visualstudio.com/docs/extensionAPI/overview)
-	* [Extension Manifest](https://code.visualstudio.com/docs/extensionAPI/extension-manifest)
-	* [Contribution Points](https://code.visualstudio.com/docs/extensionAPI/extension-points)
-	* [Activation Events](https://code.visualstudio.com/docs/extensionAPI/activation-events)
-	* [API vscode namespace](https://code.visualstudio.com/docs/extensionAPI/vscode-api)
-	* [API Complex Commands](https://code.visualstudio.com/docs/extensionAPI/vscode-api-commands)
-	* [API Debugging](https://code.visualstudio.com/docs/extensionAPI/api-debugging)
+  * [Overview](https://code.visualstudio.com/docs/extensionAPI/overview)
+  * [Extension Manifest](https://code.visualstudio.com/docs/extensionAPI/extension-manifest)
+  * [Contribution Points](https://code.visualstudio.com/docs/extensionAPI/extension-points)
+  * [Activation Events](https://code.visualstudio.com/docs/extensionAPI/activation-events)
+  * [API vscode namespace](https://code.visualstudio.com/docs/extensionAPI/vscode-api)
+  * [API Complex Commands](https://code.visualstudio.com/docs/extensionAPI/vscode-api-commands)
+  * [API Debugging](https://code.visualstudio.com/docs/extensionAPI/api-debugging)
 
 * TOOLS
-	* [Publishing Tool](https://code.visualstudio.com/docs/tools/vscecli)
-	* [Extension Generator](https://code.visualstudio.com/docs/tools/yocode)
-	* [Samples](https://code.visualstudio.com/docs/tools/samples)
+  * [Publishing Tool](https://code.visualstudio.com/docs/tools/vscecli)
+  * [Extension Generator](https://code.visualstudio.com/docs/tools/yocode)
+  * [Samples](https://code.visualstudio.com/docs/tools/samples)
 
 （翻译完成的，请使用删除线将对应划去,像下面这样）
 	* ~~[Overview](https://code.visualstudio.com/docs)~~
@@ -134,6 +134,7 @@ Microsoft Visual Studio Code 中文手册
 
 - [Jeason](http://jeasonstudio.github.io/)
 - [swizard](http://swizardlv.github.io/)
+- [heshenghuan](http://heshenghuan.github.io/)
 - 你的名字
 
 （Fork 之后自行添加到最后）
