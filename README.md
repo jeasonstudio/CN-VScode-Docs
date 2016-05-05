@@ -56,6 +56,7 @@ Microsoft Visual Studio Code 中文手册
 ## 正在翻译文章+作者
 
 * OverView+Jeason
+* The Basics+Swizard
 * 你正在翻译的文章+你的名字
 
 ## 项目翻译目录
