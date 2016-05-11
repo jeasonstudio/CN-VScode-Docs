@@ -86,7 +86,7 @@ Microsoft Visual Studio Code 中文手册
 * LANGUAGES
   * [Overview](https://code.visualstudio.com/docs/languages/overview)
   * [JavaScript](https://code.visualstudio.com/docs/languages/javascript)
-  * [C#](https://code.visualstudio.com/docs/languages/csharp)
+  * ~~[C#](https://code.visualstudio.com/docs/languages/csharp)~~
   * [C++](https://code.visualstudio.com/docs/languages/cpp)
   * [JSON](https://code.visualstudio.com/docs/languages/json)
   * [HTML](https://code.visualstudio.com/docs/languages/html)
@@ -136,6 +136,7 @@ Microsoft Visual Studio Code 中文手册
 - [Jeason](http://jeasonstudio.github.io/)
 - [swizard](http://swizardlv.github.io/)
 - [heshenghuan](http://heshenghuan.github.io/)
+- [Alexi.F](http://alexifeng.com/)
 - 你的名字
 
 （Fork 之后自行添加到最后）
