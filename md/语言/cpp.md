@@ -8,21 +8,34 @@ DateApproved: 3/29/2016
 MetaDescription: Find out how to get the best out of Visual Studio Code and C++.
 ---
 
-# C/C++ for VS Code (Preview)
+# C/C++ for VS Code (预览)(Preview)
 
 C/C++ support for Visual Studio Code is provided today as a preview of our work to enable cross-platform C and C++ development using VS Code on Windows, Linux, and OS X. Our focus in this preview release is code editing and navigation support for C and C++ code everywhere that VS Code runs, as well as debugging on Linux (Ubuntu 14.04 64-bit) and OS X (see _Known limitations_ below).
 
+今天作为我们工作的预览，C/C++ support for VS Code 被提供出来。它能够在Windows，Linux和OS X上跨平台开发C和C++。 我们这个预览版的重点是代码编辑和在任何运行VS Code中的C 和 C++ 的代码导航，以及在Linux(Ubuntu 14.04 64-bit)和OS X下的调试（参见下文_Known limitations_）。
+
 If you just want a lightweight tool to edit your C++ files VS Code has you covered wherever you are, but if you want the best possible experience for your existing Visual C++ projects or debugging on Windows, we recommend you use a version of Visual Studio such as [Visual Studio Community](https://www.visualstudio.com/products/visual-studio-community-vs).
+
+如果你只是想一个轻量级的工具来编辑你的C++文件，无论你在哪里VSCode都已经被覆盖。但如果你想在Windows下调试您现有的Visual C ++项目，最佳的体验，我们推荐您使用[Visual Studio社区]版本的Visual Studio。
 
 Because we're still shaping the C++ experience in VS Code, now is a great time to [provide bug reports, feature requests, and feedback](mailto:c_cpp_support@microsoft.com), and for those of you who use Linux or OS X as your development environment to [get engaged](http://landinghub.visualstudio.com/c-nonwin) with the Visual Studio team.
 
-## Installing C++ support
+因为在VS Code中，我们还在积累 C++ 的经验。现在是一个[提供错误报告，请求功能和反馈](mailto:c_cpp_support@microsoft.com)的最好的时间。并请那些在使用Linux或OS X作为开发环境的人，[参与](http://landinghub.visualstudio.com/c-nonwin)Visual Studio团队的工作。
+
+## 安装 Installing C++   Installing C++ support
 
 C++ language support is an optional [install from the Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools). Or, just install it from VS Code by launching the __Quick Open__ (`kb(workbench.action.quickOpen)`) and then entering the command **ext install cpptools**.
 
+C++ 语言支持是一个可选安装，[从Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)。或者，仅需要从VS Code启动__Quick Open__ (`kb(workbench.action.quickOpen)`)然后输入名令**ext install cpptools**来安装它。
+
 On Linux, there's an additional step that installs dependencies necessary for debugging support. When VS Code restarts after installing the extension, a script installs the [dotnet cli](http://dotnet.github.io/) dependency. Because elevated permissions are needed to install this package, you'll be prompted for your password in the terminal where the script is running. If you'd rather perform these last steps yourself, you can close the terminal now, then enter the commands yourself (these steps must be completed to enable debugging support.) For more information on these commands, see _Manual Installation for the C++ Debugger extension_ in the [README](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools).
 
+在Linux上，为了支持调试，而必需额外的安装依赖。当VS Code安装扩展后重新启动后，脚本会安装[dotnet cli](http://dotnet.github.io/) 依赖。因为需要提升权限才能安装该软件包，你会被提示在脚本运行的终端输入密码。如果您愿意执行这些步骤，最后你可以关闭终端，然后输入你自己命令开始工作（为了启用调试支持，这些步骤必须完成。）。有关这些命令的详细信息，请参考_手动安装C++调试扩展_ 中的[README](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools).
+
 On OS X, additional install steps need to be completed manually to enable debugging on OS X. See _Manual Installation for the C++ Debugger extension_ in the [README](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools).
+
+在OS X上，对于在OS X上调试，额外的安装步骤需要手工完成。请参考_手动安装C++调试扩展_ 中的[README](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools).
+
 
 ## Navigating code
 
