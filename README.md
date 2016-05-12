@@ -129,7 +129,8 @@ Microsoft Visual Studio Code 中文手册
   * [Samples](https://code.visualstudio.com/docs/tools/samples)
 
 （翻译完成的，请使用删除线将对应划去,像下面这样）
-	* ~~[Overview](https://code.visualstudio.com/docs)~~
+
+    *  ~~[Overview](https://code.visualstudio.com/docs)~~
 
 ## 贡献者（按参与时间排序）
 
@@ -137,6 +138,7 @@ Microsoft Visual Studio Code 中文手册
 - [swizard](http://swizardlv.github.io/)
 - [heshenghuan](http://heshenghuan.github.io/)
 - [Alexi.F](http://alexifeng.com/)
+- jinyutao
 - 你的名字
 
 （Fork 之后自行添加到最后）
