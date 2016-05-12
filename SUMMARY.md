@@ -47,6 +47,7 @@
    * [api调试](md/扩展API/api调试.md)
    * [vscode-api](md/扩展API/vscode-api.md)
    * [vscode-api-命令](md/扩展API/vscode-api-命令.md)
+   * vscode-api.template
 * [语言](summary/语言.md)
    * [概述](md/语言/概述.md)
    * [cpp](md/语言/cpp.md)
