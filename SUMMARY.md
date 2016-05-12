@@ -22,7 +22,7 @@
 * [工具](summary/工具.md)
 * [技术支持](summary/技术支持.md)
 * [扩展](summary/扩展.md)
-* 扩展API
+* [扩展API](summary/扩展API.md)
 * 语言
 * 运行时
 * [Overview](md/Overview.md)
