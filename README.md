@@ -130,7 +130,7 @@ Microsoft Visual Studio Code 中文手册
 
 （翻译完成的，请使用删除线将对应划去,像下面这样）
 
-     ~~  * [Overview](https://code.visualstudio.com/docs) ~~
+  *  ~~[Overview](https://code.visualstudio.com/docs)~~
 
 ## 贡献者（按参与时间排序）
 
