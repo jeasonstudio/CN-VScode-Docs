@@ -138,7 +138,7 @@ Microsoft Visual Studio Code 中文手册
 - [swizard](http://swizardlv.github.io/)
 - [heshenghuan](http://heshenghuan.github.io/)
 - [Alexi.F](http://alexifeng.com/)
-- jinyutao
+- [jinyutao](https://github.com/jinyutao)
 - 你的名字
 
 （Fork 之后自行添加到最后）
