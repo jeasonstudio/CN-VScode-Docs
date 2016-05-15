@@ -89,7 +89,7 @@ Microsoft Visual Studio Code 中文手册
   * ~~[C#](https://code.visualstudio.com/docs/languages/csharp)~~
   * [C++](https://code.visualstudio.com/docs/languages/cpp)
   * [JSON](https://code.visualstudio.com/docs/languages/json)
-  * [HTML](https://code.visualstudio.com/docs/languages/html)
+  * ~~[HTML](https://code.visualstudio.com/docs/languages/html)~~
   * [PHP](https://code.visualstudio.com/docs/languages/php)
   * [Markdown](https://code.visualstudio.com/docs/languages/markdown)
   * [TypeScript](https://code.visualstudio.com/docs/languages/typescript)
