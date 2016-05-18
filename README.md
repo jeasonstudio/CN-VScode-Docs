@@ -1,3 +1,4 @@
+
 Microsoft Visual Studio Code 中文手册
 ===============
 
@@ -57,6 +58,7 @@ Microsoft Visual Studio Code 中文手册
 
 * OverView+Jeason
 * The Basics+Swizard
+* Editing Evolved+heshenghuan
 * 你正在翻译的文章+你的名字
 
 ## 项目翻译目录
