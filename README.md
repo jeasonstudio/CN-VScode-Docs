@@ -55,8 +55,9 @@ Microsoft Visual Studio Code 中文手册
 
 ## 正在翻译文章+作者
 
-* OverView+Jeason
-* The Basics+Swizard
+* OverView   + Jeason
+* The Basics + Swizard
+* Extensions + Maroon1
 * 你正在翻译的文章+你的名字
 
 ## 项目翻译目录
@@ -104,8 +105,8 @@ Microsoft Visual Studio Code 中文手册
 
 * EXTENSIONS
   * [Overview](https://code.visualstudio.com/docs/extensions/overview)
-  * [Example - Hello World](https://code.visualstudio.com/docs/extensions/example-hello-world)
-  * [Example - Word Count](https://code.visualstudio.com/docs/extensions/example-word-count)
+  * ~~[Example - Hello World](https://code.visualstudio.com/docs/extensions/example-hello-world)~~
+  * ~~[Example - Word Count](https://code.visualstudio.com/docs/extensions/example-word-count)~~
   * [Example - Language Server](https://code.visualstudio.com/docs/extensions/example-language-server)
   * [Example - Debuggers](https://code.visualstudio.com/docs/extensions/example-debuggers)
   * [Principles and Patterns](https://code.visualstudio.com/docs/extensions/patterns-and-principles)
@@ -139,6 +140,7 @@ Microsoft Visual Studio Code 中文手册
 - [heshenghuan](http://heshenghuan.github.io/)
 - [Alexi.F](http://alexifeng.com/)
 - [jinyutao](https://github.com/jinyutao)
+- [Maroon1](https://github.com/maroon1)
 - 你的名字
 
 （Fork 之后自行添加到最后）

@@ -4,80 +4,79 @@ Area: extensions
 TOCTitle: Example-Word Count
 ContentId: 4D9132DC-CDDB-4E07-B2DD-9A7E168BE384
 PageTitle: Visual Studio Code Example - Word Count Extension
-DateApproved: 4/14/2016
+DateApproved: 5/9/2016
 MetaDescription: The Word Count extension (plug-in) example takes you deeper into the Visual Studio Code extensibility model, showing how to interact with the editor and manage extension and VS Code resources.
 ---
 
-# Example - Word Count
+# 示例 - 单词统计
 
-This document assumes you have read [Your First Extension](/docs/extensions/example-hello-world.md) which covers the basics of VS Code extensibility.
+这篇文档假设你已经阅读过[《你的第一个扩展应用》](/docs/extensions/example-hello-world.md)，那篇文章包括 VS Code 扩展性的基础内容。
 
-Word Count is an end to end tutorial to show you how to create an extension to aid in Markdown authoring.  Before we get into how all of this works, let's have a quick demo of the core features you will be building so you know what to expect.
+单词统计是一个完整的教程，它向你展示了如何创建一个扩展应用来帮助编写 Markdown。在我们开始所有工作之前，让我们先看一个你将要构建的核心功能的Demo来让你了解你接下来需要做什么。
 
-Whenever a `Markdown` file is edited, a status bar message is added.  The message includes the current word count and updates as you type and move from file to file:
+当编辑 `Markdown` 文件的时候，添加一个状态栏消息。这个消息包含当前单词的总数，并且当你从一个文件切换到另外一个文件的时候，也要更新这个状态。
 
 ![Word Count on Status Bar](images/example-word-count/wordcountevent2.gif)
 
-> **Tip:** The finished sample is available from [this GitHub repository](https://github.com/microsoft/vscode-wordcount) should you have any issues.
+> **技巧：**有任何问题的话，从[这个 GitHub 仓库](https://github.com/microsoft/vscode-wordcount)获取完成后的样例。
 
 
-## Overview
+## 概述
 
-This example has three sections which will take you through a set of related concepts:
+这个示例共分为三个部分来带你了解一组相关的概念
 
-1. [Update the Status Bar](/docs/extensions/example-word-count.md#update-the-status-bar) - display custom text in the VS Code `Status Bar`
-2. [Subscribing to Events](/docs/extensions/example-word-count.md#subscribing-to-events) - updating the `Status Bar` based on editor events
-3. [Disposing Extension Resources](/docs/extensions/example-word-count.md#disposing-extension-resources) - release resources like event subscriptions or UI handles
+1. [更新状态栏](/docs/extensions/example-word-count.md#update-the-status-bar) - 在 VS Code `状态栏` 显示自定义文本
+2. [订阅事件](/docs/extensions/example-word-count.md#subscribing-to-events) - 根据编辑器事件来更新`状态栏`
+3. [清理扩展应用资源](/docs/extensions/example-word-count.md#disposing-extension-resources) - 诸如事件订阅或UI操作的资源释放
 
-First make sure you have the latest VS Code extension generator installed then run it:
+首先确认你已经安装好最新的 VS Code 扩展应用生成器并运行它：
 
 ```bash
 npm install -g yo generator-code
 yo code
 ```
 
-This will open up the extension generator - we will base this example on the TypeScript `New Extension` option. For now, simply fill in the fields the same way you see them completed in the image below (using 'WordCount' as the extension name and your own name as the publisher).
+这将启用扩展应用生成器 - 我们将以 TypeScript `New Extension` 选项的示例为基础。现在，简单的按照下面的图片所示那样填入这些字段（用 'WordCount' 作为扩展应用的名称，发布者填你自己的名字）。
 
 ![Yo Code Word Count Example Output](images/example-word-count/yo1.png)
 
-You can now open VS Code as described in the generator output:
+现在你可以在生成器输出的目录下打开 VS Code：
 
 ```bash
 cd WordCount
 code .
 ```
 
-## Run the Extension
+## 运行这个扩展应用
 
-Before we go on, we can run the extension to make sure everything works as expected by pressing `kb(workbench.action.debug.start)`. As you saw in the previous "Hello World" walkthrough, VS Code opens another window (the **[Extension Development Host]** window) in which your extension will be loaded. You should find the "Hello World" command in the Command Palette (press `kb(workbench.action.showCommands)`) and when you select it, you will see an information box at the top of the window saying "Hello World".
+在我们继续之前，我们可以先按一下 `kb(workbench.action.debug.start)` 来运行这个扩展应用以确保一切都工作正常。正如之前 "Hello World" 演示中你所看到的那样，VS Code 打开了另一个加载了你的扩展应用的窗口（**[扩展开发主机]**窗口）。你应当可以在命令面板（按 `kb(workbench.action.showCommands)`）里找到 "Hello World" 命令然后选中它，你将在窗口的顶部看到一个 "Hello World" 的信息框。
 
-Now that you have confirmed that the extension is running properly, you can keep the extension development window open if you like. To test out any changes that you make to your extension, you can either press `kb(workbench.action.debug.continue)` again in the development window or reload the extension development window by pressing `kbstyle(Ctrl+R)` (Mac: `kbstyle(Cmd+R)`).
+现在你可以确保这个扩展应用可以正常运行了，假如你愿意的话你可以一直开着这个扩展应用开发窗口。要测试你修改后的扩展应用的话，你可以在开发窗口中再按一下 `kb(workbench.action.debug.continue)` 或者按 `kbstyle(Ctrl+R)`（Mac: `kbstyle(Cmd+R)`）来重新加载这个扩展应用开发窗口。
 
-## Update the Status Bar
+## 更新状态栏
 
-Replace the contents of the generated `extension.ts` file with the code shown below. It declares and instantiates a `WordCounter` class which can count words and shows them in the VS Code Status Bar.  The "Hello Word" command will call `updateWordCount` when invoked.
+用以下所示的代码替换掉之前生成的 `extension.ts` 文件中的内容。它声明并实例化了一个能够统计单词数并显示在 VS Code 状态栏的 `WordCounter` 类。当调用"Hello Word" 命令的时候将会调用 `updateWordCount` 方法。
 
 ```javascript
-// The module 'vscode' contains the VS Code extensibility API
-// Import the necessary extensibility types to use in your code below
+// 'vscode'模块包含 VS Code 扩展性API
+// 在你的代码中导入必须的扩展性类型
 import {window, commands, Disposable, ExtensionContext, StatusBarAlignment, StatusBarItem, TextDocument} from 'vscode';
 
-// This method is called when your extension is activated. Activation is
-// controlled by the activation events defined in package.json.
+// 当你的扩展应用被激活的时候调用该方法。通过在 package.json 中定义的激活事件来控制激活。
 export function activate(context: ExtensionContext) {
 
-    // Use the console to output diagnostic information (console.log) and errors (console.error).
-    // This line of code will only be executed once when your extension is activated.
+    // 使用控制台输出诊断信息（console.log）和错误（console.error）。
+    // 这行代码只会执行一次，就是在你的扩展被激活的时候。
     console.log('Congratulations, your extension "WordCount" is now active!');
 
-    // create a new word counter
+    // 创建一个新的WordCounter实例
     let wordCounter = new WordCounter();
 
     var disposable = commands.registerCommand('extension.sayHello', () => {
         wordCounter.updateWordCount();
     });
 
-    // Add to a list of disposables which are disposed when this extension is deactivated.
+    // 当扩展应用被停用时，把需要清理的东西添加到一个清理列表
     context.subscriptions.push(wordCounter);
     context.subscriptions.push(disposable);
 }
@@ -88,12 +87,12 @@ class WordCounter {
 
     public updateWordCount() {
 
-        // Create as needed
+        // 如果需要的话就创建一个
         if (!this._statusBarItem) {
             this._statusBarItem = window.createStatusBarItem(StatusBarAlignment.Left);
         }
 
-        // Get the current text editor
+        // 获取当前的文本编辑器
         let editor = window.activeTextEditor;
         if (!editor) {
             this._statusBarItem.hide();
@@ -102,7 +101,7 @@ class WordCounter {
 
          let doc = editor.document;
 
-        // Only update status if an MarkDown file
+        // 如果当前文档是 MarkDown 文件才更新状态
         if (doc.languageId === "markdown") {
             let wordCount = this._getWordCount(doc);
 
@@ -118,7 +117,7 @@ class WordCounter {
 
         let docContent = doc.getText();
 
-        // Parse out unwanted whitespace so the split is accurate
+        // 解析出多余的空格以便可以准确的分离单词
         docContent = docContent.replace(/(< ([^>]+)<)/g, '').replace(/\s+/g, ' ');
         docContent = docContent.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
         let wordCount = 0;
@@ -135,24 +134,24 @@ class WordCounter {
 }
 ```
 
-Now let's try our updates to the extension.
+现在让我们试试更新这个扩展应用
 
-We have the compilation of the TypeScript file set on a watch (in the extension's .vscode\tasks.json file) so there is no need to re-build.  Simply hit `kbstyle(Ctrl+R)` in the **[Extension Development Host]** window where your code is running and the extension will reload (you can also just `kb(workbench.action.debug.start)` from your primary development window).  We still need to activate the code in the same way as before with the "Hello World" command.  Assuming you are in a Markdown file, your Status Bar will display the word count.
+因为我们已经设置了监视(在扩展应用的 .vscode\tasks.json 文件中)，所以不需要重新编译，我们就已经有编译好的TypeScript文件了。在你代码运行的那个**[扩展开发主机]** 窗口中只要敲击 `kbstyle(Ctrl+R)`，这个扩展应用就会重新加载（你也可以在你的主开发窗口按 `kb(workbench.action.debug.start)`）。我们依然需要像之前那样用“Hello World”命令来调用。假如你在 Markdown 文件中的话，你的状态栏将会显示单词总数。
 
 ![Working Word Count](images/example-word-count/wordcount2.png)
 
-This is a good start but it would be cooler if the count updated as your file changed.
+这是个不错的开始，不过如果在文档变化的时候可以自动更新计数的话就更酷了。
 
-## Subscribing to Events
+## 订阅事件
 
-Let's hook your helper class up to a set of events.
+让我们给你的辅助类加上一组事件。
 
-* `onDidChangeTextEditorSelection` - Event is raised as the cursor position changes
-* `onDidChangeActiveTextEditor` - Event is raised as the active editor changes.
+* `onDidChangeTextEditorSelection` - 如果光标位置改变的时候触发这个事件
+* `onDidChangeActiveTextEditor` - 如果活动的编辑器改变的时候触发这个事件
 
-To do this, we'll add a new class into the `extension.ts` file. It will set up subscriptions to those events and ask the `WordCounter` to update the word count. Also note how this class manages the subscription as Disposables and how it stops listing when being disposed itself.
+为了做到这点，我们将新增一个类到 `extension.ts` 文件中。它将设置订阅这些事件并请求 `WordCounter` 更新单词计数。同时注意这个类如何作为Disposables来管理这个订阅，以及当它被清理的时候如何停止监听的。
 
-Add the `WordCounterController` as shown below to the bottom of the `extension.ts` file.
+把以下所示的 `WordCounterController` 类添加到 `extension.ts` 文件的末尾。
 
 ```javascript
 class WordCounterController {
@@ -164,15 +163,15 @@ class WordCounterController {
         this._wordCounter = wordCounter;
         this._wordCounter.updateWordCount();
 
-        // subscribe to selection change and editor activation events
+        // 订阅选择集变化事件和编辑器激活事件
         let subscriptions: Disposable[] = [];
         window.onDidChangeTextEditorSelection(this._onEvent, this, subscriptions);
         window.onDidChangeActiveTextEditor(this._onEvent, this, subscriptions);
 
-        // update the counter for the current file
+        // 更新当前文件的计数器
         this._wordCounter.updateWordCount();
 
-        // create a combined disposable from both event subscriptions
+        // 将所有的事件订阅放入一个清理容器中
         this._disposable = Disposable.from(...subscriptions);
     }
 
@@ -186,25 +185,25 @@ class WordCounterController {
 }
 ```
 
-We no longer want the Word Count extension to be loaded when a command is invoked but instead be available for each *Markdown* file. 
+我们不用再调用命令来加载这个单词统计扩展应用，取而代之的是每个 *Markdown* 文件都可以用。
 
-First, replace the body of the `activate` function with this:
+首先，用这个来替换掉 `activate` 函数的主体。
 
 ```javascript
-// Use the console to output diagnostic information (console.log) and errors (console.error).
-// This line of code will only be executed once when your extension is activated.
+// 使用控制台输出诊断信息（console.log）和错误（console.error）。
+// 这行代码只会执行一次，就是在你的扩展被激活的时候。
 console.log('Congratulations, your extension "WordCount" is now active!');
 
-// create a new word counter
+// 创建一个新的WordCounter类
 let wordCounter = new WordCounter();
 let controller = new WordCounterController(wordCounter);
 
-// Add to a list of disposables which are disposed when this extension is deactivated.
+// 当扩展应用被停用时，把需要清理的东西添加到一个清理列表
 context.subscriptions.push(controller);
 context.subscriptions.push(wordCounter);
 ```
 
-Second, we must make sure the extension is activated upon the opening of a `Markdown` file.  To do this, we'll need to modify the `package.json` file.  Previously the extension was activated via the `extension.sayHello` command which we no longer need and so we can delete the entire `contributes` attribute from `package.json`:
+然后，我们必须确保打开一个 `Markdown` 文件的同时激活这个扩展应用。为了做到这点，我们需要修改 `package.json` 文件。我们不再需要通过 `extension.sayHello` 这个命令来激活扩展应用，这个扩展应用预先就已经激活了，所以我们可以从 `package.json` 中删除全部的 `contributes` 属性。
 
 ```json
     "contributes": {
@@ -217,7 +216,7 @@ Second, we must make sure the extension is activated upon the opening of a `Mark
     },
 ```
 
-Now change your extension so that it is activated upon the opening of a *Markdown* file by updating the `activationEvents` attribute to this:
+现在更改你的扩展应用，以便他可以在打开一个 *Markdown* 文件的同时被激活，更新 `activationEvents` 属性为这个：
 
 ```json
     "activationEvents": [
@@ -225,72 +224,72 @@ Now change your extension so that it is activated upon the opening of a *Markdow
     ]
 ```
 
-The  [`onLanguage:${language}`](/docs/extensionAPI/activation-events.md#activationeventsonlanguage) event takes the language id, in this case "markdown", and will be raised whenever a file of that language is opened.
+[`onLanguage:${language}`](/docs/extensionAPI/activation-events.md#activationeventsonlanguage)事件的language标识符设置为"markdown"，这样子任何时候打开那种语言的文件都会触发这个事件。
 
-Run the extension by either doing a window reload `kbstyle(Ctrl+R)` or with `kb(workbench.action.debug.start)` and then start editing a Markdown file.  You should now should have a live updating Word Count.
+按 `kbstyle(Ctrl+R)` 或 `kb(workbench.action.debug.start)` 重新加载一个窗口来运行这个扩展应用，然后开始编辑一个 Markdown 文件。现在你应该有一个自动更新的单词统计功能。
 
 ![Word Count Updating on Events](images/example-word-count/wordcountevent2.gif)
 
-If you set a breakpoint on the `activate` function, you'll notice that it is only called once when the first Markdown file is opened.  The `WordCountController` constructor runs and subscribes to the editor events so that the `updateWordCount` function is called as Markdown files are opened and their text changes. 
+如果你在 `activate` 函数那里设置一个调试断点的话，你会发现它只有在第一个 Markdown 文件被打开的时候被调用了一次。`WordCountController` 构造函数运行并订阅了编辑器事件，所以当打开 Markdown 文件以及它们的文本有变化的时候 `updateWordCount` 就会被调用。
 
-## Customizing the Status Bar
+## 自定义状态栏
 
-We've seen how you can display formatted text on the Status Bar.  VS Code allows you to customize your Status Bar additions even further with color, icons, tooltips and more.  Using IntelliSense, you can see the various `StartBarItem` fields.  Another great resource for learning about the VS Code extensibility APIs is the `vscode.d.ts` typings file included in your generated Extension project.  Open `node_modules\vscode\vscode.d.ts` in the editor, you'll see the complete VS Code extensibility API with comments.
+我们已经见识过如何在状态栏显示一个格式化的文本。VS Code 还允许你进一步的通过颜色，图标，工具提示等等方式自定义你的状态栏。
 
 ![vscode-d-ts file](images/example-word-count/vscode-d-ts.png)
 
-Replace the StatusBarItem update code with:
+如下替换StatusBarItem的更新代码：
 
 ```javascript
-    // Update the status bar
+    // 更新状态栏
     this._statusBarItem.text = wordCount !== 1 ? `$(pencil) ${wordCount} Words` : '$(pencil) 1 Word';
     this._statusBarItem.show();
 ```
 
-to display a [GitHub Octicon](https://octicons.github.com) `pencil` icon to the left of the calculated word count.
+在单词统计的计算值的左边显示了一个 [GitHub Octicon](https://octicons.github.com) `pencil` 图标。
 
 ![Word Count with pencil icon](images/example-word-count/wordcount-pencil.png)
 
-## Disposing Extension Resources
+## 清理扩展应用资源
 
-Now we'll take a deeper look at how extensions should handle VS Code resources through [Disposables](/docs/extensions/patterns-and-principles.md#disposables).
+现在我们来更深入的探究扩展应用如何通过 [Disposables](/docs/extensions/patterns-and-principles.md#disposables) 来使用 VS Code 资源的。
 
-When an extension is activated, it is passed an `ExtensionContext` object which has a `subscriptions` collection of Disposables. Extensions can add their Disposable objects to this collection and VS Code will dispose of those objects when the extension is deactivated.
+当一个扩展应用被激活的时候，传递给它一个拥有 `subscriptions` `Disposables` 集合的 `ExtensionContext` 对象。扩展应用能够添加他们的 `Disposable` 对象到这个集合中，并且当扩展应用停用的时候 VS Code 将清理这些对象。
 
-Many VS Code APIs which create workspace or UI objects (e.g. `registerCommand`) return a Disposable and extensions can remove these elements from VS Code by calling their dispose method directly.
+许多创建工作空间或UI对象（例如：`registerCommand`）的 VS Code APIs 会返回一个 `Disposable` ，然后扩展应用能够直接通过调用他们的 `dispose()` 方法来从 VS Code 中移除这些对象。
 
-Events are another example where `onDid*` event subscriber methods return a Disposable.  Extensions unsubscribe to an event by disposing the event's Disposable.  In our example, `WordCountController` handles the event subscription Disposables directly by keeping its own Disposable collection which it cleans up on deactivation.
+事件是另一个例如有 `onDid*` 事件订阅者方法返回的一个 `Disposable`。扩展应用通过清理事件的 `Disposable` 来退订一个事件。在我们的示例中，`WordCountController` 通过保存一个自有的在停用时清理的 `Disposable` 集合来操作事件订阅 `Disposables`。
 
 ```javascript
-    // subscribe to selection change and editor activation events
+    // 订阅选择集变化事件和编辑器激活事件
     let subscriptions: Disposable[] = [];
     window.onDidChangeTextEditorSelection(this._onEvent, this, subscriptions);
     window.onDidChangeActiveTextEditor(this._onEvent, this, subscriptions);
 
-    // create a combined disposable from both event subscriptions
+    //将所有的事件订阅放入一个清理容器中
     this._disposable = Disposable.from(...subscriptions);
 ```
 
-## Installing your Extension Locally
+## 本地安装你的扩展应用
 
-So far, the extension you have written only runs in a special instance of VS Code, the Extension Development Host instance. To make your extension available to all VS Code instances, copy the extension folder contents to a new folder under [your `.vscode/extensions` folder](/docs/extensions/install-extension.md#your-extensions-folder).
+到目前为止，你编写的扩展应用都只运行在一个特定的 VS Code 实例（扩展开发主机实例）中。复制这个扩展应用文件夹的内容到[你的 `.vscode/extensions` 目录](/docs/extensions/install-extension.md#your-extensions-folder)下的一个新文件夹中，让你的扩展应用在所有 VS Code 实例中都可用。
 
-## Publishing your Extension
+## 发布你的扩展应用
 
-Read about how to [Share an Extension](/docs/tools/vscecli.md).
+阅读关于如何[共享一个应用](/docs/tools/vscecli.md)。
 
-## Next Steps
+## 下一步
 
-Read on to find out about:
+继续阅读以了解有关：
 
-* [Yo Code](/docs/tools/yocode.md) - learn about other options in Yo Code
-* [Extension API](/docs/extensionAPI/overview.md) - Get an overview of the Extension API
-* [Customization](/docs/customization/overview.md) - Themes, settings and keyboard bindings
-* [Publishing Tool](/docs/tools/vscecli.md) - Learn how to publish an extension to the public Marketplace
-* [Editor API](/docs/extensionAPI/vscode-api.md#window) - Learn more about Text Documents, Text Editors and editing text
+* [Yo Code](/docs/tools/yocode.md) - 学习有关Yo Code的其他选项
+* [扩展应用 API](/docs/extensionAPI/overview.md) - 获取扩展应用API的概述
+* [自定义](/docs/customization/overview.md) - 主题，设置和快捷键绑定
+* [发布工具](/docs/tools/vscecli.md) - 学习如何向公共市场发布一个扩展应用
+* [编辑器 API](/docs/extensionAPI/vscode-api.md#window) - 学习更多有关文本文档，文本编辑器和编辑文本的内容
 
-## Common Questions
+## 通用问题
 
-Nothing yet
+没了
 
 
