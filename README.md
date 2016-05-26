@@ -94,7 +94,7 @@ Microsoft Visual Studio Code 中文手册
   * ~~[HTML](https://code.visualstudio.com/docs/languages/html)~~
   * [PHP](https://code.visualstudio.com/docs/languages/php)
   * [Markdown](https://code.visualstudio.com/docs/languages/markdown)
-  * [TypeScript](https://code.visualstudio.com/docs/languages/typescript)
+  * ~~[TypeScript](https://code.visualstudio.com/docs/languages/typescript)~~
   * [CSS, Sass and Less](https://code.visualstudio.com/docs/languages/css)
   * [Dockerfile](https://code.visualstudio.com/docs/languages/dockerfile)
 
@@ -141,6 +141,7 @@ Microsoft Visual Studio Code 中文手册
 - [heshenghuan](http://heshenghuan.github.io/)
 - [Alexi.F](http://alexifeng.com/)
 - [jinyutao](https://github.com/jinyutao)
+- [yuxuefeng](https://github.com/twem007)
 - 你的名字
 
 （Fork 之后自行添加到最后）
