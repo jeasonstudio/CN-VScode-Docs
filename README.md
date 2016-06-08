@@ -59,6 +59,7 @@ Microsoft Visual Studio Code 中文手册
 * OverView+Jeason
 * The Basics+Swizard
 * Editing Evolved+heshenghuan
+* Debugging+ZhenshengLee
 * 你正在翻译的文章+你的名字
 
 ## 项目翻译目录
@@ -142,6 +143,7 @@ Microsoft Visual Studio Code 中文手册
 - [Alexi.F](http://alexifeng.com/)
 - [jinyutao](https://github.com/jinyutao)
 - [yuxuefeng](https://github.com/twem007)
+- [ZhenshengLee](https://github.com/ZhenshengLee)
 - 你的名字
 
 （Fork 之后自行添加到最后）
