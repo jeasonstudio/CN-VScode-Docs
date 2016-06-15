@@ -60,6 +60,7 @@ Microsoft Visual Studio Code 中文手册
 * The Basics+Swizard
 * Editing Evolved+heshenghuan
 * C++ + imbaqian
+* Javascript+Styx
 * 你正在翻译的文章+你的名字
 
 ## 项目翻译目录
