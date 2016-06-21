@@ -24,11 +24,17 @@ VS Code的JavaScript支持可以在两种模式下运行：
 
 * **File Scope - no jsconfig.json**: In this mode, JavaScript files opened in Visual Studio Code are treated as independent units. As long as a file `a.js` doesn't reference a file `b.ts` explicitly (either using /// reference [directives](http://www.typescriptlang.org/docs/handbook/triple-slash-directives.html) or **CommonJS** [modules](http://www.commonjs.org/specs/modules/1.0)), there is no common project context between the two files.
 
-* **文件范围 - 没有jsconfig.json**：在这一模式下，在Visual Studio Code中打开的JavaScript文件被视为独立的单元。只要一个文件“a.js”没有显性的引用一个文件“b.js”（无论是使用/// reference [directives](http://www.typescriptlang.org/docs/handbook/triple-slash-directives.html)还是使用**CommonJS** [modules](http://www.commonjs.org/specs/modules/1.0))
+* **文件范围 - 没有jsconfig.json**：在这一模式下，在Visual Studio Code中打开的JavaScript文件被视为独立的单元。只要一个文件“a.js”没有显性的引用一个文件“b.js”（无论是使用/// reference [directives](http://www.typescriptlang.org/docs/handbook/triple-slash-directives.html)还是使用**CommonJS** [modules](http://www.commonjs.org/specs/modules/1.0))，两个文件之间没有共同的项目内容。
 
 * **Explicit Project - with jsconfig.json**: A JavaScript project is defined via a `jsconfig.json` file. The presence of such a file in a directory indicates that the directory is the root of a JavaScript project. The file itself can optionally list the files belonging to the project, the files to be excluded from the project, as well as compiler options (see below).
 
+* **显性项目 - 包含jsconfig.json**：一个JavaScript项目通过“jsconfig.json”文件进行定义。在一个目录下存在这样一个文件即表明这是一个JavaScript项目的根目录。这个文件本身可以可选择的列出包含在这个项目的文件，也可以包含项目中剔除的文件，以及编译器选项。（见下）
+
 The JavaScript experience is much better when you have a `jsconfig.json` file in your workspace that defines the project context. For this reason, we provide a hint to create a `jsconfig.json` file when you open a JavaScript file in a fresh workspace. The `jsconfig.json` file corresponds to a TypeScript project [tsconfig.json](https://github.com/Microsoft/TypeScript/wiki/tsconfig.json) file with the attribute `allowJS` implicitly set to `true`. If no `files` attribute is present, then this defaults to including all files in the containing directory and subdirectories. When a `files` attribute is specified, only those files are included.
+
+当在你的工作空间中有一个“jsconfig.json”文件以定义项目内容时，JavaScript的体验会更佳。因此，当你在一个新的工作空间中打开JavaScript文件时，我们会提供一个建立“jsconfig.json”文件的提示。TypeScript项目的 [tsconfig.json](https://github.com/Microsoft/TypeScript/wiki/tsconfig.json)文件的allowJS属性“jsconfig.json”文件和
+
+上次翻译到此————
 
 Make sure that you place the `jsconfig.json` at the root of your JavaScript project and not just at the root of your workspace. Below is a `jsconfig.json` file which defines the JavaScript `target` to be `ES6` and the `exclude` attribute excludes the `node_modules` folder.
 
