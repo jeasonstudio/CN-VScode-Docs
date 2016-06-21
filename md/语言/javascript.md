@@ -10,15 +10,21 @@ MetaDescription: Get the best out of Visual Studio Code for JavaScript developme
 
 # JavaScript
 
-## Rich Editing Support
+## Rich Editing Support 丰富的编辑支持
 
 Visual Studio Code uses the TypeScript language service to make authoring JavaScript easy. In addition to syntactical features like format, format on type and outlining, you also get language service features such as **Peek**, **Go to Definition**, **Find all References**, and **Rename Symbol**.
 
-## JavaScript Projects (jsconfig.json)
+Visual Studio Code使用TypeScript语言服务以简单地创作JavaScript。除了一般的语法内容例如格式、对于类型的格式化、缩略图以外，你还将获得其他语言服务内容包括**一瞥**，**转到定义**，**找到所有引用**，以及**重命名符号**。
+
+## JavaScript Projects (jsconfig.json) JavaScript 项目（jsconfig.json）
 
 VS Code's JavaScript support can operate in two different modes:
 
+VS Code的JavaScript支持可以在两种模式下运行：
+
 * **File Scope - no jsconfig.json**: In this mode, JavaScript files opened in Visual Studio Code are treated as independent units. As long as a file `a.js` doesn't reference a file `b.ts` explicitly (either using /// reference [directives](http://www.typescriptlang.org/docs/handbook/triple-slash-directives.html) or **CommonJS** [modules](http://www.commonjs.org/specs/modules/1.0)), there is no common project context between the two files.
+
+* **文件范围 - 没有jsconfig.json**：在这一模式下，在Visual Studio Code中打开的JavaScript文件被视为独立的单元。只要一个文件“a.js”没有显性的引用一个文件“b.js”（无论是使用/// reference [directives](http://www.typescriptlang.org/docs/handbook/triple-slash-directives.html)还是使用**CommonJS** [modules](http://www.commonjs.org/specs/modules/1.0))
 
 * **Explicit Project - with jsconfig.json**: A JavaScript project is defined via a `jsconfig.json` file. The presence of such a file in a directory indicates that the directory is the root of a JavaScript project. The file itself can optionally list the files belonging to the project, the files to be excluded from the project, as well as compiler options (see below).
 
