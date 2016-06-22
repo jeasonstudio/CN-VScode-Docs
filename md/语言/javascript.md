@@ -10,21 +10,33 @@ MetaDescription: Get the best out of Visual Studio Code for JavaScript developme
 
 # JavaScript
 
-## Rich Editing Support
+## Rich Editing Support 丰富的编辑支持
 
 Visual Studio Code uses the TypeScript language service to make authoring JavaScript easy. In addition to syntactical features like format, format on type and outlining, you also get language service features such as **Peek**, **Go to Definition**, **Find all References**, and **Rename Symbol**.
 
-## JavaScript Projects (jsconfig.json)
+Visual Studio Code使用TypeScript语言服务以简单地创作JavaScript。除了一般的语法内容例如格式、对于类型的格式化、缩略图以外，你还将获得其他语言服务内容包括**一瞥**，**转到定义**，**找到所有引用**，以及**重命名符号**。
+
+## JavaScript Projects (jsconfig.json) JavaScript 项目（jsconfig.json）
 
 VS Code's JavaScript support can operate in two different modes:
 
+VS Code的JavaScript支持可以在两种模式下运行：
+
 * **File Scope - no jsconfig.json**: In this mode, JavaScript files opened in Visual Studio Code are treated as independent units. As long as a file `a.js` doesn't reference a file `b.ts` explicitly (either using /// reference [directives](http://www.typescriptlang.org/docs/handbook/triple-slash-directives.html) or **CommonJS** [modules](http://www.commonjs.org/specs/modules/1.0)), there is no common project context between the two files.
+
+* **文件范围 - 没有jsconfig.json**：在这一模式下，在Visual Studio Code中打开的JavaScript文件被视为独立的单元。只要一个文件“a.js”没有显性的引用一个文件“b.js”（无论是使用/// reference [directives](http://www.typescriptlang.org/docs/handbook/triple-slash-directives.html)还是使用**CommonJS** [modules](http://www.commonjs.org/specs/modules/1.0))，两个文件之间没有共同的项目内容。
 
 * **Explicit Project - with jsconfig.json**: A JavaScript project is defined via a `jsconfig.json` file. The presence of such a file in a directory indicates that the directory is the root of a JavaScript project. The file itself can optionally list the files belonging to the project, the files to be excluded from the project, as well as compiler options (see below).
 
+* **显性项目 - 包含jsconfig.json**：一个JavaScript项目通过“jsconfig.json”文件进行定义。在一个目录下存在这样一个文件即表明这是一个JavaScript项目的根目录。这个文件本身可以可选择的列出包含在这个项目的文件，也可以包含项目中剔除的文件，以及编译器选项。（见下）
+
 The JavaScript experience is much better when you have a `jsconfig.json` file in your workspace that defines the project context. For this reason, we provide a hint to create a `jsconfig.json` file when you open a JavaScript file in a fresh workspace. The `jsconfig.json` file corresponds to a TypeScript project [tsconfig.json](https://github.com/Microsoft/TypeScript/wiki/tsconfig.json) file with the attribute `allowJS` implicitly set to `true`. If no `files` attribute is present, then this defaults to including all files in the containing directory and subdirectories. When a `files` attribute is specified, only those files are included.
 
+当在你的工作空间中有一个“jsconfig.json”文件以定义项目内容时，JavaScript的体验会更佳。因此，当你在一个新的工作空间中打开JavaScript文件时，我们会提供一个建立“jsconfig.json”文件的提示。当“jsconfig.json”文件和TypeScript项目的 [tsconfig.json](https://github.com/Microsoft/TypeScript/wiki/tsconfig.json)文件协同工作时，其allowJS属性隐性地设为真。如果file属性不存在，则默认地将目录及子目录下的所有文件包括进徐昂目中，如果file属性存在，则按照他的值包括。
+
 Make sure that you place the `jsconfig.json` at the root of your JavaScript project and not just at the root of your workspace. Below is a `jsconfig.json` file which defines the JavaScript `target` to be `ES6` and the `exclude` attribute excludes the `node_modules` folder.
+
+请确定你讲“jsconfig.json”文件放在了你的JavaScript项目的根目录下，而不仅仅是你的工作空间根目录。以下是一个“jsconfig.json”文件，他定义了JavaScript的“target”为“ES6”，以及用“exclude”属性排除了“node_modules”文件夹。
 
 ```json
 {
@@ -38,6 +50,9 @@ Make sure that you place the `jsconfig.json` at the root of your JavaScript proj
 ```
 
 Here is an example with an explicit `files` attribute.
+
+本案例包括了一个显性的“files”属性。
+
 ```json
 {
     "compilerOptions": {
@@ -51,17 +66,27 @@ Here is an example with an explicit `files` attribute.
 
 The `files` attribute cannot be used in conjunction with the `exclude` attribute. If both are specified, the `files` attribute takes precedence.
 
+“files”属性不能与“exclude”属性同时出现，如果两者都有的话，“文件”属性优先度较高。
+
 In more complex projects, you may have more than one `jsconfig.json` file defined inside a workspace, as illustrated in below for a project with a `client` and `server` folder, that are a separate project context:
+
+在更复杂的项目中，你也许在一个工作空间中会有不止一个“jsconfig.json”文件，正如如下所示的一个项目，他包含了一个“client”文件夹和一个“server”文件夹，他们是分开的项目环境。
 
 ![multiple jsconfigs](images/javascript/client-server.png)
 
-### Excludes 
+### Excludes 排除
 
 Whenever possible, you should exclude folders with JavaScript files that are not part of the source code for your project.
 
+任何时候，你都应该将并非你项目源代码的JavaScript文件所在的文件夹排除出去。
+
 >**Note:** If you do not have a `jsconfig.json` in your workspace, VS Code will by default exclude the `node_modules` folder and the folder defined by the `out` attribute.
 
+>**注:** 如果在你的工作空间没有“jsconfig.json”文件，VS Code会默认地排除“node_modules”文件夹以及被“out”属性定义的文件夹。
+
 Below is a table mapping common project components to their installation folders which are recommended to exclude:
+
+以下表格表明了一个常见项目的构件，以及安装文件夹中推荐排除的：
 
 Component | folder to exclude
 ----------|-----------
@@ -71,13 +96,27 @@ Component | folder to exclude
 `ember` | exclude the `tmp` and `temp` folders
 `jspm` | exclude the `jspm_packages` folder
 
+构件 | 排除的文件夹
+----------|-----------
+`node` | 排除“node_modules”文件夹
+`webpack`, `webpack-dev-server` | 排除内容文件夹，例如“dist”
+`bower` | 排除“bower_components”文件夹
+`ember` | 排除“tmp` and `temp”文件夹
+`jspm` | 排除“jspm_packages”文件夹
+
 When your JavaScript project is growing too large, it is often because of library folders like `node_modules`. If VS Code detects that your project is growing too large, it will prompt you to edit the `exclude` list.
+
+当你的JavaScript项目变得过大的时候，其原因经常是因为库文件夹比如说“node_modules”。如果VS Code发现你的项目过大时，他会建议你编辑“exclude”名单。
 
 >**Tip:** Sometimes changes to configuration, such as adding or editing a `jsconfig.json` file are not picked up correctly. Running the **Reload Java Script** command should reload the project and pick up the changes.
 
-### jsconfig Options
+>**Tip:** 有时会对于配置的改变，比如添加或者编辑“jsconfig.json”文件会发生错误。进行**Reload Java Script（重新载入Java Script）**命令来重新载入项目，并且更新改动。
+
+### jsconfig Options jsconfig选项
 
 Below are jsconfig options to configure the JavaScript language support.
+
+以下是jsconfig选项，他用来配置JavaScript语言支持功能。
 
 Option  | Description
 ----------------|-----
@@ -86,22 +125,42 @@ Option  | Description
 `experimentalDecorators`|Enables experimental support for proposed ES decorators.
 `allowSyntheticDefaultImports`|Allow default imports from modules with no default export. This does not affect code emit, just typechecking.
 
-## IntelliSense
+选项  | 描述
+----------------|-----
+`noLib` | 不要包含默认的库文件（lib.d.ts）
+`target`| 指明使用哪一个默认库（lib.d.ts）。可选的值包括“ES3”，“ES5”，“ES6”
+`experimentalDecorators`|为制定的ES指示器启用实验性的支持
+`allowSyntheticDefaultImports`|允许对没有默认出口的模块进行默认输入。这一选项不会影响代码发布，只是字面检查
+
+## IntelliSense 智能感知
 
 The JavaScript Support uses different strategies to provide IntelliSense.
 
-### IntelliSense based on type inference
+JavaScript支持使用不同的策略进行智能感知。
+
+### IntelliSense based on type inference 基于类型推理的智能感知
 
 JavaScript uses the same inference as TypeScript to determine the type of a value.
 
+JavaScript使用与TypeScript相同的推理机制来判断一个值的类型。
+
 The following patterns are also recognized:
+
+以下的模式也是被承认的：
 
 - **"ES3-style"** classes, specified using a constructor function and assignments to the prototype property.
 - **CommonJS**-style module patterns, specified as property assignments on the exports object, or assignments to the `module.exports` property.
 
+- **"ES3-style"** 使用构造函数并且对原型属性赋值，以此进行规定的类。
+- **CommonJS**风格的模块，对出口对象属性赋值或是通过赋值“module.exports”属性，以此进行规定的类。
+
 The **AMD** (Asynchronous Module Definition) module pattern is currently not supported.
 
+**AMD**（异步模块定义）模块模式现在不被支持。
+
 IntelliSense offers both inferred proposals and the global identifiers of the project. The inferred symbols are presented first, followed by the global identifiers (with the document icon), as you can see in the image below.
+
+翻译到此分割线
 
 ![IntelliSense](images/javascript/es3-classes.png)
 
