@@ -34,9 +34,15 @@ Here is an example with a very simple file.
 
 By default, we use a CSS style for the preview that matches the style of VS Code. If you want to use your own CSS for the Markdown preview, update the `"markdown.styles": []` [setting](/docs/customization/userandworkspace.md) with the comma-separated list of URL(s) for your style sheet(s).
 
+默认的，我们使用CSS风格的预览模式用以适应VS Code的风格。如果你想用自己的Markdown预览风格，请使用逗号分隔的URLs升级`"markdown.styles": []` [setting](/docs/customization/userandworkspace.md)。
+
 For instance, in the screen shot above we used a custom CSS to change the default font for the page and changed the color for the H1 title.
 
+举个例子，在文中的预览截图即为应用了我们自己定制的CSS样式，其中修改了默认字体和H1标题的颜色
+
 Here is the relevant CSS:
+
+这是相关的实现用CSS：
 
 ```css
 body {
