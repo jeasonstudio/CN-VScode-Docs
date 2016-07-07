@@ -2,7 +2,7 @@
 Microsoft Visual Studio Code 中文手册
 ===============
 
- Visual Studio Code 是微软推出的跨平台编辑器。它采用经典的VS的UI布局，功能强大，扩展性很强。但是  Visual Studio Code 暂时没有中文手册，对于不太熟悉英文的同学会比较吃力。
+Visual Studio Code 是微软推出的跨平台编辑器。它采用经典的VS的UI布局，功能强大，扩展性很强。但是  Visual Studio Code 暂时没有中文手册，对于不太熟悉英文的同学会比较吃力。
 
 本项目的初衷是为想使用或者正在使用 Visual Studio Code 的同学提供一个中文手册，方便大家学习使用这个优秀的工具，提高程序开发效率和质量！
 
@@ -61,7 +61,7 @@ Microsoft Visual Studio Code 中文手册
 * Editing Evolved+heshenghuan
 * C++ + imbaqian
 * Javascript+Styx
-* 你正在翻译的文章+你的名字
+* Markdown+Cherry Mill Wong
 
 ## 项目翻译目录
 
@@ -145,6 +145,6 @@ Microsoft Visual Studio Code 中文手册
 - [jinyutao](https://github.com/jinyutao)
 - [yuxuefeng](https://github.com/twem007)
 - [chenxinlong](http://github.com/chenxinlong)
-- 你的名字
+- [Cherry Mill Wong](http://http://123.206.79.144/)
 
 （Fork 之后自行添加到最后）
