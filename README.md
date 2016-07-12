@@ -107,7 +107,7 @@ Visual Studio Code 是微软推出的跨平台编辑器。它采用经典的VS�
   * [Office](https://code.visualstudio.com/docs/runtimes/office)
 
 * EXTENSIONS
-  * [Overview](https://code.visualstudio.com/docs/extensions/overview)
+  * ~~[Overview](https://code.visualstudio.com/docs/extensions/overview)~~
   * [Example - Hello World](https://code.visualstudio.com/docs/extensions/example-hello-world)
   * [Example - Word Count](https://code.visualstudio.com/docs/extensions/example-word-count)
   * [Example - Language Server](https://code.visualstudio.com/docs/extensions/example-language-server)
@@ -146,5 +146,6 @@ Visual Studio Code 是微软推出的跨平台编辑器。它采用经典的VS�
 - [yuxuefeng](https://github.com/twem007)
 - [chenxinlong](http://github.com/chenxinlong)
 - [Cherry Mill Wong](http://http://123.206.79.144/)
+- [bjrxyz](https://github.com/bjrxyz)
 
 （Fork 之后自行添加到最后）
