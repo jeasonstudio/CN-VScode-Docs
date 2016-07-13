@@ -472,7 +472,7 @@ Read about how to [Share an Extension](/docs/tools/vscecli.md).
 
 ## 下一步  Next Steps
 
-在这篇教程中，我们学习了一个非常简单的插件。这里有个更复杂的示例[Word Count Example](/docs/extensions/example-word-count.md)展示了如何针对某一种特定的语言（Markdown）以及监听编辑器的内容修改事件 。
+在这篇教程中，我们学习了一个非常简单的插件。这里有个更复杂的示例[单词数统计示例](/docs/extensions/example-word-count.md)展示了如何针对某一种特定的语言（Markdown）以及监听编辑器的内容修改事件 。
 
 如果你想了解更多的插件API的信息，可以试试阅读以下文档：
 
