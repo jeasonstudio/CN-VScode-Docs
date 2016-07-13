@@ -259,7 +259,7 @@ Let's go through the purpose of all these files and explain what they do:
 
 ```javascript
 // 'vscode'模块包含了VS Code插件API
-// 在你的代码中导入模块并且用vscode的别名引用模块
+// 导入模块并且在下面你的代码中用vscode的别名引用这个模块
 import * as vscode from 'vscode';
 
 // 这个函数将在你的插件被激活时被调用
