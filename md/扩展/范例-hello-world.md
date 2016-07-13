@@ -267,7 +267,7 @@ import * as vscode from 'vscode';
 export function activate(context: vscode.ExtensionContext) {
 
 	// 使用控制台去输出诊断信息(console.log)和错误信息(console.error)
-	// 只要当你的插件被激活时才会执行下面这行代码
+	// 只有当你的插件被激活时才会执行下面这行代码
 	console.log('Congratulations, your extension "my-first-extension" is now active!');
 
 	// 这条命令被定义在package.json文件里
