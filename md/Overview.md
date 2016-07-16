@@ -24,7 +24,7 @@ Print debugging is a thing of the past. Debug in VS Code with your terminal tool
     
 ## 快速，强大的编辑能力（Fast, Powerful Editing）
 
-![Fast, Powerful Editing](https://code.visualstudio.com/docs_carousel/docs_carousel/errors.png)
+![Fast, Powerful Editing](https://code.visualstudio.com/docs_carousel/errors.png)
 
 Linting, multi-cursor editing, parameter hints, and other powerful editing features.
 
@@ -32,7 +32,7 @@ Linting, multi-cursor editing, parameter hints, and other powerful editing featu
 
 ## 代码导航和重构（Code Navigation and Refactoring）
 
-![Code Navigation and Refactoring](https://code.visualstudio.com/docs_carousel/docs_carousel/peek.png)
+![Code Navigation and Refactoring](https://code.visualstudio.com/docs_carousel/peek.png)
 
 Browse your source code quickly using peek and navigate to definition.
 
@@ -40,7 +40,7 @@ Browse your source code quickly using peek and navigate to definition.
 
 ## 对于产品的Git支持（In-Product Git Support）
 
-![In-Product Git Support](https://code.visualstudio.com/docs_carousel/docs_carousel/git.png)
+![In-Product Git Support](https://code.visualstudio.com/docs_carousel/git.png)
 
 Speed up your release cycle with Git support inside your editor.
 
