@@ -62,7 +62,7 @@ Visual Studio Code 是微软推出的跨平台编辑器。它采用经典的VS�
 * C++ + imbaqian
 * Javascript+Styx
 * Markdown+Cherry Mill Wong
-
+* EXTENSIONS + bjrxyz
 ## 项目翻译目录
 
 * [Overview](https://code.visualstudio.com/docs)
@@ -108,8 +108,8 @@ Visual Studio Code 是微软推出的跨平台编辑器。它采用经典的VS�
 
 * EXTENSIONS
   * ~~[Overview](https://code.visualstudio.com/docs/extensions/overview)~~
-  * [Example - Hello World](https://code.visualstudio.com/docs/extensions/example-hello-world)
-  * [Example - Word Count](https://code.visualstudio.com/docs/extensions/example-word-count)
+  * ~~[Example - Hello World](https://code.visualstudio.com/docs/extensions/example-hello-world)~~
+  * ~~[Example - Word Count](https://code.visualstudio.com/docs/extensions/example-word-count)~~
   * [Example - Language Server](https://code.visualstudio.com/docs/extensions/example-language-server)
   * [Example - Debuggers](https://code.visualstudio.com/docs/extensions/example-debuggers)
   * [Principles and Patterns](https://code.visualstudio.com/docs/extensions/patterns-and-principles)

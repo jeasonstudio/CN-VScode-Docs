@@ -259,7 +259,7 @@ Let's go through the purpose of all these files and explain what they do:
 
 ```javascript
 // 'vscode'模块包含了VS Code插件API
-// 在你的代码中导入模块并且用vscode的别名引用模块
+// 导入模块并且在下面你的代码中用vscode的别名引用这个模块
 import * as vscode from 'vscode';
 
 // 这个函数将在你的插件被激活时被调用
@@ -267,7 +267,7 @@ import * as vscode from 'vscode';
 export function activate(context: vscode.ExtensionContext) {
 
 	// 使用控制台去输出诊断信息(console.log)和错误信息(console.error)
-	// 只要当你的插件被激活时才会执行下面这行代码
+	// 只有当你的插件被激活时才会执行下面这行代码
 	console.log('Congratulations, your extension "my-first-extension" is now active!');
 
 	// 这条命令被定义在package.json文件里
