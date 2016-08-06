@@ -55,13 +55,12 @@ Microsoft Visual Studio Code 中文手册
 
 ## 正在翻译文章+作者
 
-* OverView+Jeason
 * The Basics+Swizard
 * 你正在翻译的文章+你的名字
 
 ## 项目翻译目录
 
-* [Overview](https://code.visualstudio.com/docs)
+* ~~[Overview](https://code.visualstudio.com/docs)~~
 
 * EDITOR
   * ~~[Setup](https://code.visualstudio.com/docs/editor/setup)~~
@@ -139,6 +138,7 @@ Microsoft Visual Studio Code 中文手册
 - [heshenghuan](http://heshenghuan.github.io/)
 - [Alexi.F](http://alexifeng.com/)
 - [jinyutao](https://github.com/jinyutao)
+- [JessyTang](https://github.com/JessyTang)
 - 你的名字
 
 （Fork 之后自行添加到最后）
