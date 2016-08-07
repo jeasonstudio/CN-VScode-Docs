@@ -1,7 +1,7 @@
 Microsoft Visual Studio Code 中文手册
 ===============
 
-## DEMO：[https://jeasonstudio.gitbooks.io/vscode-cn-doc/content/](https://jeasonstudio.gitbooks.io/vscode-cn-doc/content/)
+#### DEMO：[https://jeasonstudio.gitbooks.io/vscode-cn-doc/content/](https://jeasonstudio.gitbooks.io/vscode-cn-doc/content/)
 
 Visual Studio Code 是微软推出的跨平台编辑器。它采用经典的VS的UI布局，功能强大，扩展性很强。但是  Visual Studio Code 暂时没有中文手册，对于不太熟悉英文的同学会比较吃力。
 
