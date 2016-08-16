@@ -1,23 +1,23 @@
-# Why Visual Studio Code?
+# Why Visual Studio Code? - 为什么选用VSCode
 
-Visual Studio Code provides developers with a new choice of developer tool that combines the simplicity and streamlined experience of a code editor with the best of what developers need for their core code-build-debug cycle. Visual Studio Code is the first code editor, and first cross-platform development tool - supporting OS X, Linux, and Windows - in the Visual Studio family.
+VSCode 提供给开发者一个新的简约开发工具的选择，它可以简化开发人员需要的`编译-构建-调试`流程。VSCode 是VS家族中第一个代码编辑器以及第一个支持OS X，Linux 和 Windows的跨平台开发工具。
 
 ![Visual Studio Code runs on Max OS X, Linux and Windows](images/whyvscode/macwinlinux2.png)
 
-At its heart, Visual Studio Code features a powerful, fast source code editor great for day-to-day use. VS Code has many of the features developers need in a code and text editor, including navigation, keyboard support with customizable bindings, syntax highlighting, bracket matching, auto indentation, and snippets, with support for dozens of languages.
+VSCode 的初衷是提供一个强大的，迅捷的源代码编辑器，并且可以每日使用。VSCode 有很多开发者在编码及编辑中需要的特性，包括导航，自定义键盘快捷键绑定，语法高亮，括弧匹配，自动缩进以及支持10多种语言的代码片段。
 
-For serious coding, developers often need to work with code as more than just text. Visual Studio Code includes built-in support for always-on IntelliSense code completion, richer semantic code understanding and navigation, and code refactoring. VS Code includes enriched built-in support for Node.js development with TypeScript and JavaScript, powered by the same underlying technologies that drive Visual Studio. VS Code includes great tooling for web technologies such as HTML, CSS, Less, Sass, and JSON. VS Code also integrates with package managers, repositories and build tools to perform common tasks to make everyday workflows faster. And VS Code understands Git, and delivers great Git workflows and source diffs integrated with the editor.
+在大型的编程项目中，开发者经常需要投入更多精力在编码而不只是打字。VSCode 内建了不间断的智能代码补全，丰富的语义分析以及代码导航系统，同时也提供了重构功能。VSCode 尤其对于使用 TypeScript 和 JavaScript 的 Node.js 开发提供了强大的支持，这些支持由 VSCode 的底层驱动提供。VSCode 还能为 HTML，CSS，Less，Sass，JSON 等 web 语言提供加工。VSCode 同时集成了包管理器，代码仓库和构建工具来执行一般的任务以加速每日的工作。而且 VSCode 提供了良好的 git 工作流支持，源代码 diff 功能也集成在了编辑器中。 
 
-But developers don't spend all their time just writing code: they go back and forth between coding and debugging. Debugging is the most popular feature in Visual Studio, and often the one feature from an IDE that developers want in a leaner coding experience. Visual Studio Code includes a streamlined, integrated debugging experience, with support for Node.js debugging for example.
+但是开发者不只是写代码，他们还要不断调试。调试功能是 VSCode 最受欢迎的特性，而且这个特性来源于 IDE 中，它能让开发者感觉更方便。VSCode 提供了一个简约，智能的调试系统，并以对 Node.js 的调试作为例子。
 
-Architecturally, Visual Studio Code combines the best of web, native, and language-specific technologies. Using the [GitHub Electron Shell](https://github.com/atom/electron), VS Code combines web technologies such as JavaScript and Node.js with the speed and flexibility of native apps. VS Code uses a newer, faster version of the same industrial-strength HTML-based editor that has powered the “Monaco” cloud editor, Internet Explorer's F12 Tools, and other projects. And VS Code uses a tools service architecture that enables it to use many of the same technologies that power Visual Studio, including Roslyn for .NET, TypeScript, the Visual Studio debugging engine, and more. Visual Studio Code includes a public extensibility model that lets developers build and use extensions, and richly customize their edit-build-debug experience.
+在架构上，VSCode 包括了web技术，本地技术以及特定于语言的技术，并把它们最好的部分所结合。VSCode 使用 [GitHub Electron Shell](https://github.com/atom/electron)，既提供了快速的 web 开发技术，又提供了灵活的本地应用开发支持。Monaco，Internet Explorer 的 F12 工具 使用的是基于HTML的编辑器。VSCode 使用了一个更新、更快的版本。而且VSCode使用了工具服务架构，这允许了它使用与Visual Studio相同的技术，包括 C# 的 Roslyn，TypeScript，以及VS的调试引擎等等。VSCode有一个公共的，可扩展的模型。所以开发者可以构建、使用扩展，并且丰富自己的开发体验。
 
-If you prefer a code editor-centric development tool or are building cross-platform web and cloud applications, we invite you to try out the Visual Studio Code and let us know what you think!
+如果你更喜欢用源代码编辑器开发或者正在构建跨平台的 web 或者云应用。我们诚邀您使用VSCode，并且让我们知道你的想法！
 
-## Next Steps
+## 下一步
 
-Read on to find out about:
+继续阅读以继续发现：
 
-* [Visual Studio Code Basics](/docs/editor/codebasics.md) - a quick orientation of VS Code
-* [Editing Evolved](/docs/editor/editingevolved.md) - from code colorization & multi-cursor to IntelliSense
-* [Debugging](/docs/editor/debugging.md) - OK time for the really fun stuff - break, step, watch
+* [基础](/docs/editor/codebasics.md) - 关于 VSCode 的快速预览
+* [更进一步](/docs/editor/editingevolved.md) - 代码着色，多光标以及智能补全
+* [调试](/docs/editor/debugging.md) - 是时候用些真正好玩的了 - break, step, watch

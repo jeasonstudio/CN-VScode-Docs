@@ -160,21 +160,29 @@ The **AMD** (Asynchronous Module Definition) module pattern is currently not sup
 
 IntelliSense offers both inferred proposals and the global identifiers of the project. The inferred symbols are presented first, followed by the global identifiers (with the document icon), as you can see in the image below.
 
-翻译到此分割线
+智能感知既可以提供推断的建议，也可以提供这一项目中使用的全局标识符。其中推断的将首先显示，然后是全局标识符（伴随着文档图标），如下图所示。
 
 ![IntelliSense](images/javascript/es3-classes.png)
 
-### JSDoc annotations
+### JSDoc annotations JSDoc 注释
 
 Where type inference does not provide the desired type information, (or just for documentation purposes), type information may be provided explicitly via **JSDoc** annotations.
 
+当类型推断无法提供想要的类型信息时，（或者仅仅是为了文档目的），类型信息可能通过**JSDoc**注释明确地提供。
+
 This [document](https://github.com/Microsoft/TypeScript/wiki/JsDoc-support-in-JavaScript) describes the **JSDoc** annotations currently supported.
 
-### TypeScript definition file
+这一[文档](https://github.com/Microsoft/TypeScript/wiki/JsDoc-support-in-JavaScript)描述了现在支持的**JSDoc**注释。
+
+### TypeScript definition file TypeScript定义文件
 
  You can also get IntelliSense for libraries through the use of type definition `.d.ts` files. [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) is a repository of typings files for all major JavaScript libraries and environments. The typings are easily managed using [Typings](https://github.com/typings/typings), the TypeScript Definition manager.
 
+ 你也可以通过使用类型定义 `.d.ts`文件获得智能感知对库的支持。[DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)是一个包含了现主要JavaScript库和环境类型文件的文档库。这些类型文件可以简单地使用TypeScript定义管理器，[Typings](https://github.com/typings/typings)，进行管理。
+
 For example `typings install --ambient node` installs all the typings for the built-in Node.js modules. If your project has a `jsconfig.json` file, then make sure that `typings` is contained in the project context defined by the location of the `jsconfig.json` file. If you have no `jsconfig.json`, then you need to manually add a `/// reference`  to the `.d.ts` from each JavaScript file.
+
+比如说，
 
 >**Tip**: When you want to use ES6 style imports but the typings do not yet use ES6 style exports, then set the [TypeScript compiler option](https://www.typescriptlang.org/docs/handbook/compiler-options.html) `allowSyntheticDefaultImports` to true.
 
