@@ -74,7 +74,7 @@ Visual Studio Code 是微软推出的跨平台编辑器。它采用经典的VS�
   * [Editing Evolved](https://code.visualstudio.com/docs/editor/editingevolved)
   * [Version Control](https://code.visualstudio.com/docs/editor/versioncontrol)
   * [Debugging](https://code.visualstudio.com/docs/editor/debugging)
-  * [Tasks](https://code.visualstudio.com/docs/editor/tasks)
+  * ~~[Tasks](https://code.visualstudio.com/docs/editor/tasks)~~
   * [Accessibility](https://code.visualstudio.com/docs/editor/accessibility)
   * [Why Vs Code](https://code.visualstudio.com/docs/editor/whyvscode)
 
