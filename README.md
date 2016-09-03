@@ -63,7 +63,7 @@ Visual Studio Code 是微软推出的跨平台编辑器。它采用经典的VS�
 * Javascript+Styx
 * Markdown+Cherry Mill Wong
 * EXTENSIONS + bjrxyz
-* debugging + Fallenwood
+* Version Control + Fallenwood
 ## 项目翻译目录
 
 * ~~[Overview](https://code.visualstudio.com/docs)~~
@@ -74,7 +74,7 @@ Visual Studio Code 是微软推出的跨平台编辑器。它采用经典的VS�
   * [Extension Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery)
   * [Editing Evolved](https://code.visualstudio.com/docs/editor/editingevolved)
   * [Version Control](https://code.visualstudio.com/docs/editor/versioncontrol)
-  * [Debugging](https://code.visualstudio.com/docs/editor/debugging)
+  * ~~[Debugging](https://code.visualstudio.com/docs/editor/debugging)~~
   * ~~[Tasks](https://code.visualstudio.com/docs/editor/tasks)~~
   * [Accessibility](https://code.visualstudio.com/docs/editor/accessibility)
   * [Why Vs Code](https://code.visualstudio.com/docs/editor/whyvscode)
