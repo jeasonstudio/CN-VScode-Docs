@@ -150,5 +150,6 @@ Visual Studio Code 是微软推出的跨平台编辑器。它采用经典的VS�
 - [bjrxyz](https://github.com/bjrxyz)
 - [avaicode](https://github.com/avaicode)
 - [Fallenwood](https://fallenwood.github.io)
+- [ickall](https://github.com/ickall)
 
 （Fork 之后自行添加到最后）
