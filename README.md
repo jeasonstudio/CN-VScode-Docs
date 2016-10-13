@@ -110,8 +110,8 @@ Visual Studio Code 是微软推出的跨平台编辑器。它采用经典的VS�
   * ~~[Overview](https://code.visualstudio.com/docs/extensions/overview)~~
   * ~~[Example - Hello World](https://code.visualstudio.com/docs/extensions/example-hello-world)~~
   * ~~[Example - Word Count](https://code.visualstudio.com/docs/extensions/example-word-count)~~
-  * [Example - Language Server](https://code.visualstudio.com/docs/extensions/example-language-server)
-  * [Example - Debuggers](https://code.visualstudio.com/docs/extensions/example-debuggers)
+  * ~~[Example - Language Server](https://code.visualstudio.com/docs/extensions/example-language-server)~~
+  * ~~[Example - Debuggers](https://code.visualstudio.com/docs/extensions/example-debuggers)~~
   * [Principles and Patterns](https://code.visualstudio.com/docs/extensions/patterns-and-principles)
   * [Running and Debugging Your Extension](https://code.visualstudio.com/docs/extensions/debugging-extensions)
   * [Installing Extensions](https://code.visualstudio.com/docs/extensions/install-extension)
