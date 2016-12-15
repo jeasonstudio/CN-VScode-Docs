@@ -86,7 +86,7 @@ Visual Studio Code 是微软推出的跨平台编辑器。它采用经典的VS�
   * [Snippets](https://code.visualstudio.com/docs/customization/userdefinedsnippets)
   * [Colorizer](https://code.visualstudio.com/docs/customization/colorizer)
   * ~~[Themes](https://code.visualstudio.com/docs/customization/themes)~~
-  * [Display Language](https://code.visualstudio.com/docs/customization/locales)
+  * ~~[Display Language](https://code.visualstudio.com/docs/customization/locales)~~
 
 * LANGUAGES
   * [Overview](https://code.visualstudio.com/docs/languages/overview)
@@ -151,5 +151,6 @@ Visual Studio Code 是微软推出的跨平台编辑器。它采用经典的VS�
 - [avaicode](https://github.com/avaicode)
 - [Fallenwood](https://fallenwood.github.io)
 - [ickall](https://github.com/ickall)
+- [Albert C.](https://github.com/ccssooll999)
 
 （Fork 之后自行添加到最后）
