@@ -76,7 +76,7 @@ Visual Studio Code 是微软推出的跨平台编辑器。它采用经典的VS�
   * [Version Control](https://code.visualstudio.com/docs/editor/versioncontrol)
   * ~~[Debugging](https://code.visualstudio.com/docs/editor/debugging)~~
   * ~~[Tasks](https://code.visualstudio.com/docs/editor/tasks)~~
-  * [Accessibility](https://code.visualstudio.com/docs/editor/accessibility)
+  * ~~[Accessibility](https://code.visualstudio.com/docs/editor/accessibility)~~
   * [Why Vs Code](https://code.visualstudio.com/docs/editor/whyvscode)
 
 * CUSTOMIZATION
@@ -152,5 +152,7 @@ Visual Studio Code 是微软推出的跨平台编辑器。它采用经典的VS�
 - [Fallenwood](https://fallenwood.github.io)
 - [ickall](https://github.com/ickall)
 - [Albert C.](https://github.com/ccssooll999)
+- [Saier](https://github.com/279838089)
+
 
 （Fork 之后自行添加到最后）
