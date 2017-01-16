@@ -70,14 +70,14 @@ Visual Studio Code 是微软推出的跨平台编辑器。它采用经典的VS�
 
 * EDITOR
   * ~~[Setup](https://code.visualstudio.com/docs/editor/setup)~~
-  * [The Basics](https://code.visualstudio.com/docs/editor/codebasics)
-  * [Extension Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery)
-  * [Editing Evolved](https://code.visualstudio.com/docs/editor/editingevolved)
-  * [Version Control](https://code.visualstudio.com/docs/editor/versioncontrol)
+  * ~~[The Basics](https://code.visualstudio.com/docs/editor/codebasics)~~
+  * ~~[Extension Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery)~~
+  * ~~[Editing Evolved](https://code.visualstudio.com/docs/editor/editingevolved)~~
+  * ~~[Version Control](https://code.visualstudio.com/docs/editor/versioncontrol)~~
   * ~~[Debugging](https://code.visualstudio.com/docs/editor/debugging)~~
   * ~~[Tasks](https://code.visualstudio.com/docs/editor/tasks)~~
   * ~~[Accessibility](https://code.visualstudio.com/docs/editor/accessibility)~~
-  * [Why Vs Code](https://code.visualstudio.com/docs/editor/whyvscode)
+  * ~~[Why Vs Code](https://code.visualstudio.com/docs/editor/whyvscode)~~
 
 * CUSTOMIZATION
   * [Overview](https://code.visualstudio.com/docs/customization/overview)
@@ -89,21 +89,21 @@ Visual Studio Code 是微软推出的跨平台编辑器。它采用经典的VS�
   * ~~[Display Language](https://code.visualstudio.com/docs/customization/locales)~~
 
 * LANGUAGES
-  * [Overview](https://code.visualstudio.com/docs/languages/overview)
-  * [JavaScript](https://code.visualstudio.com/docs/languages/javascript)
+  * ~~[Overview](https://code.visualstudio.com/docs/languages/overview)~~
+  * ~~[JavaScript](https://code.visualstudio.com/docs/languages/javascript)~~
   * ~~[C#](https://code.visualstudio.com/docs/languages/csharp)~~
-  * [C++](https://code.visualstudio.com/docs/languages/cpp)
-  * [JSON](https://code.visualstudio.com/docs/languages/json)
+  * ~~[C++](https://code.visualstudio.com/docs/languages/cpp)~~
+  * ~~[JSON](https://code.visualstudio.com/docs/languages/json)~~
   * ~~[HTML](https://code.visualstudio.com/docs/languages/html)~~
   * ~~[PHP](https://code.visualstudio.com/docs/languages/php)~~
-  * [Markdown](https://code.visualstudio.com/docs/languages/markdown)
+  * ~~[Markdown](https://code.visualstudio.com/docs/languages/markdown)~~
   * ~~[TypeScript](https://code.visualstudio.com/docs/languages/typescript)~~
-  * [CSS, Sass and Less](https://code.visualstudio.com/docs/languages/css)
+  * ~~[CSS, Sass and Less](https://code.visualstudio.com/docs/languages/css)~~
   * [Dockerfile](https://code.visualstudio.com/docs/languages/dockerfile)
 
 * RUNTIMES
-  * [Node.js](https://code.visualstudio.com/docs/runtimes/nodejs)
-  * [ASP.NET Core](https://code.visualstudio.com/docs/runtimes/ASPnet5)
+  * ~~[Node.js](https://code.visualstudio.com/docs/runtimes/nodejs)~~
+  * ~~[ASP.NET Core](https://code.visualstudio.com/docs/runtimes/ASPnet5)~~
   * [Unity](https://code.visualstudio.com/docs/runtimes/unity)
   * [Office](https://code.visualstudio.com/docs/runtimes/office)
 
