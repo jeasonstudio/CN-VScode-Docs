@@ -80,7 +80,7 @@ Visual Studio Code 是微软推出的跨平台编辑器。它采用经典的VS�
   * ~~[Why Vs Code](https://code.visualstudio.com/docs/editor/whyvscode)~~
 
 * CUSTOMIZATION
-  * [Overview](https://code.visualstudio.com/docs/customization/overview)
+  * ~~[Overview](https://code.visualstudio.com/docs/customization/overview)~~
   * [User and Workspace Settings](https://code.visualstudio.com/docs/customization/userandworkspace)
   * [Key Bindings](https://code.visualstudio.com/docs/customization/keybindings)
   * [Snippets](https://code.visualstudio.com/docs/customization/userdefinedsnippets)
