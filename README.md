@@ -151,3 +151,7 @@ Visual Studio Code 是微软推出的跨平台编辑器。它采用经典的VS�
 
 
 （Fork 之后自行添加到最后）
+
+## 开源协议
+ 
+ - [MIT](LICENSE)
