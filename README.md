@@ -110,13 +110,13 @@ Visual Studio Code 是微软推出的跨平台编辑器。它采用经典的VS�
   * ~~[Example - Debuggers](https://code.visualstudio.com/docs/extensions/example-debuggers)~~
   * [Principles and Patterns](https://code.visualstudio.com/docs/extensions/patterns-and-principles)
   * [Running and Debugging Your Extension](https://code.visualstudio.com/docs/extensions/debugging-extensions)
-  * [Installing Extensions](https://code.visualstudio.com/docs/extensions/install-extension)
+  * ~~[Installing Extensions](https://code.visualstudio.com/docs/extensions/install-extension)~~
   * [Testing Extension](https://code.visualstudio.com/docs/extensions/testing-extensions)
   * [Our Approach](https://code.visualstudio.com/docs/extensions/our-approach)
 
 * EXTENSIBILITY REFERENCE
-  * [Overview](https://code.visualstudio.com/docs/extensionAPI/overview)
-  * [Extension Manifest](https://code.visualstudio.com/docs/extensionAPI/extension-manifest)
+  * ~~[Overview](https://code.visualstudio.com/docs/extensionAPI/overview)~~
+  * ~~[Extension Manifest](https://code.visualstudio.com/docs/extensionAPI/extension-manifest)~~
   * [Contribution Points](https://code.visualstudio.com/docs/extensionAPI/extension-points)
   * [Activation Events](https://code.visualstudio.com/docs/extensionAPI/activation-events)
   * [API vscode namespace](https://code.visualstudio.com/docs/extensionAPI/vscode-api)
@@ -148,6 +148,7 @@ Visual Studio Code 是微软推出的跨平台编辑器。它采用经典的VS�
 - [ickall](https://github.com/ickall)
 - [Albert C.](https://github.com/ccssooll999)
 - [Saier](https://github.com/279838089)
+- [iskcal](https://github.com/iskcal)
 
 
 （Fork 之后自行添加到最后）

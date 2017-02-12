@@ -8,39 +8,40 @@ DateApproved: 4/14/2016
 MetaDescription: At the core of Visual Studio Code's extensibility model is an extension (plug-in) manifest file where your extension declares its extension type(s), activation rules and runtime resources.
 ---
 
-# Extension Manifest File - package.json
+# 扩展清单文件 - package.json
 
-Every Visual Studio Code extension needs a manifest file `package.json` at the root of the extension directory structure.
+每个VS Code扩展需要一个清单文件`package.json`，该文件位于扩展的根目录中。
 
-## Fields
 
-Name | Required | Type | Details
+## 字段
+
+名称 | 是否必要 | 类型 | 说明
 ---- |:--------:| ---- | -------
-`name` | Y | `string` | The name of the extension - should be all lowercase with no spaces.
-`version` | Y | `string` | [SemVer](http://semver.org/) compatible version.
-`publisher` | Y | `string` | The [publisher name](/docs/tools/vscecli.md#publishers-and-personal-access-tokens)
-`engines` | Y | `object` | An object containing at least the `vscode` key matching the versions of VS Code that the extension is compatible with.  Cannot be `*`. For example: `^0.10.5` indicates compatibility with a minimum VS Code version of `0.10.5`.
-`license` | | `string` | Refer to [npm's documentation](https://docs.npmjs.com/files/package.json#license). If you do have a `LICENSE` file in the root of your extension, the value for `license` should be `"SEE LICENSE IN <filename>"`.
-`displayName` | | `string`| The display name for the extension used in the Marketplace.
-`description` | | `string` | A short description of what your extension is and does.
-`categories` | | `string[]` | the categories you want to use for the extensions allowed values: `[Languages, Snippets, Linters, Themes, Debuggers, Other]`
-`keywords` | | `array` | An array of **keywords** or **tags** to make it easier to find the extension.
-`galleryBanner` | | `object` | Helps format the Marketplace header to match your icon.  See details below.
-`preview` | | `boolean` | Sets the extension to be flagged as a Preview in the Marketplace.
-`main` | | `string` | The entry point to your extension.
-[`contributes`](/docs/extensionAPI/extension-points.md) | | `object` | An object describing the extension's [contributions](/docs/extensionAPI/extension-points.md).
-[`activationEvents`](/docs/extensionAPI/activation-events.md) | | `array` | An array of the [activation events](/docs/extensionAPI/activation-events.md) for this extension.
-`dependencies` | | `object` | Any runtime Node.js dependencies your extensions needs. Exactly the same as [npm's `dependencies`](https://docs.npmjs.com/files/package.json#dependencies).
-`devDependencies` | | `object` | Any development Node.js dependencies your extension needs. Exactly the same as [npm's `devDependencies`](https://docs.npmjs.com/files/package.json#devdependencies).
-`extensionDependencies` | | `array` | An array with the ids of extensions that this extension depends on. The id of an extension is always `${publisher}.${name}`. For example: `vscode.csharp`.
-`scripts` | | `object` | Exactly the same as [npm's `scripts`](https://docs.npmjs.com/misc/scripts) but with [extra VS Code specific fields](/docs/tools/vscecli.md#pre-publish-step).
-`icon` | | `string` | The path to a 128x128 pixel icon.
+`name` | 是 | `string` | 扩展的名称，该名称必须为小写且不能有空格。
+`version` | 是 | `string` | [SemVer](http://semver.org/) 兼容版本.
+`publisher` | 是 | `string` | [发布人名字](/docs/tools/vscecli.md#publishers-and-personal-access-tokens)
+`engines` | 是 | `object` | 一个至少包含`vscode`键值对的对象，该键表示的是本扩展可兼容的VS Code的版本，其值不能为`*`。比如 `^0.10.5` 表示扩展兼容VS Code的最低版本是`0.10.5`。
+`license` | 否 | `string` | 参考 [npm's 文档](https://docs.npmjs.com/files/package.json#license). 如果你确实需要在扩展根目录下有一个授权文档，那么应该把`license`值设为`"SEE LICENSE IN <filename>"`。
+`displayName` | 否 | `string`| 用于在扩展市场中本扩展显示的名字。
+`description` | 否 | `string` | 一份简短的说明，用来说明本插件是什么以及做什么
+`categories` | 否 | `string[]` | 你希望你的扩展属于哪一类，只允许使用这几种值：`[Languages, Snippets, Linters, Themes, Debuggers, Other]`
+`keywords` | 否 | `array` | 一组 **关键字** 或者 **标记**，方便在市场中查找。
+`galleryBanner` | 否 | `object` | 帮助格式化市场标题以匹配你的图标，详情如下。
+`preview` | 否 | `boolean` | 在市场中把本扩展标记为预览版本。
+`main` | 否 | `string` | 扩展的入口点。
+[`contributes`](/docs/extensionAPI/extension-points.md) | 否 | `object` | 一个描述扩展 [贡献点](/docs/extensionAPI/extension-points.md)的对象。
+[`activationEvents`](/docs/extensionAPI/activation-events.md) | 否 | `array` | 一组用于本扩展的 [激活事件](/docs/extensionAPI/activation-events.md)。
+`dependencies` | 否 | `object` | 你的扩展所需的任何运行时的Node.js依赖项，和 [npm's `dependencies`](https://docs.npmjs.com/files/package.json#dependencies)一样。
+`devDependencies` | 否 | `object` | 你的扩展所需的任何开发的Node.js依赖项. 和 [npm's `devDependencies`](https://docs.npmjs.com/files/package.json#devdependencies)一样。
+`extensionDependencies` | 否 | `array` | 一组本扩展所需的其他扩展的ID值。扩展的ID值始终是 `${publisher}.${name}`。比如：`vscode.csharp`。
+`scripts` | 否 | `object` | 和 [npm's `scripts`](https://docs.npmjs.com/misc/scripts)一样，但还有一些[额外VS Code特定字段](/docs/tools/vscecli.md#pre-publish-step).
+`icon` | 否 | `string` | 一个128x128像素图标的路径。
 
-Also check [npm's `package.json` reference](https://docs.npmjs.com/files/package.json).
+也可以查看[npm's `package.json`参考文档](https://docs.npmjs.com/files/package.json).
 
-## Example
+## 范例
 
-Here is a complete `package.json`
+这里有一个完整的`package.json`：
 
 ```json
 {
@@ -101,27 +102,27 @@ Here is a complete `package.json`
 }
 ```
 
-## Marketplace Presentation Tips
+## 市场呈现要点
 
-Here are some tips and recommendations to make your extension look great when displayed on the [VS Code Marketplace](https://marketplace.visualstudio.com/VSCode).
+为了让你自己的扩展在[VS Code市场]中看起来更好，这里有几个要点和建议。
 
-Always use the latest `vsce` so `npm install -g vsce` to make sure you have it.
+始终使用最新的`vsce`，即用`npm install -g vsce`可保证最新。
 
-Have a `README.md` Markdown file in your extension's root folder and we will include the contents in the body of the extension details (on the Marketplace).  You can provide relative path image links in the `REAMDE.md`.
+在你的扩展根目录中编写一个`README.md`的MAERKDOWN文档，这样我们会在市场中的扩展信息中显示其中的内容。你可以在`README.md`中提供图片的相对路径链接。
 
-Here are a few examples:
+这里有几个例子做说明：
 
 1. [Spell-Checker](https://marketplace.visualstudio.com/items/seanmcbreen.Spell)
 2. [MD Tools](https://marketplace.visualstudio.com/items/seanmcbreen.MDTools)
 
 
-Provide a good display name and description. This is important for the Marketplace and in product displays.  These strings are also used for text search in VS Code and having relevant keywords will help a lot.
+请提供一个良好的显示名称和描述。这对于市场和产品显示都非常重要。在VS Code中这些字符串能用于文本搜索，并且有相关关键字将有很大帮助。
 ```json
 	"displayName": "Spelling and Grammar Checker",
 	"description": "Detect mistakes as you type and suggest fixes - great for Markdown.",
 ```
 
-An Icon and a contrasting banner color looks great on the Marketplace page header.  The `theme` attribute refers to the font to be used in the banner - `dark` or `light`.
+在市场页面头中，有一个图标以及对比色横幅也会让扩展看起来非常棒，`theme`属性指的是在横幅中使用的字体：`dark`或者是`light`。
 ```json
 	"icon": "images/spellIcon.svg",
 	"galleryBanner": {
@@ -130,7 +131,7 @@ An Icon and a contrasting banner color looks great on the Marketplace page heade
 	},
 ```
 
-There are several optional links (`bugs`, `homepage`, `repository`) you can set and these are displayed under the **Resources** section of the Marketplace.
+你也可以设置一些其他的链接(错误、主页、代码库)，他们会在市场中**资源**一栏所呈现出来。
 ```json
 	"license": "SEE LICENSE IN LICENSE.md",
 	"bugs": {
@@ -143,16 +144,17 @@ There are several optional links (`bugs`, `homepage`, `repository`) you can set 
 	}
 ```
 
-Marketplace Resources link | package.json attribute
+市场资源链接 | package.json 属性
 -----------------|-----------------------
-Support | `bugs:url`
-Get Started | `repository:url`
-Learn | `homepage`
-License | `license`
+支持 | `bugs:url`
+开始页 | `repository:url`
+主页 | `homepage`
+授权 | `license`
 
-Set a `category` for your extension.  Extensions in the same `category` are grouped together on the Marketplace which improves filtering and discovery.
+为你的扩展设置`category`。在市场中，同一个`category`将会放在一起，这样就方便过滤和查找。
 
->**Note:** Only use the values that make sense for your extension - allowed values are `[Languages, Snippets, Linters, Themes, Debuggers, Other]`
+
+>**注意** 为你的扩展使用正确的值，只能使用这些值`[Languages, Snippets, Linters, Themes, Debuggers, Other]`
 
 ```json
 	"categories": [
@@ -160,13 +162,14 @@ Set a `category` for your extension.  Extensions in the same `category` are grou
 	],
 ```
 
-## Combining Extension Contributions
+## 结合扩展贡献
 
-The `yo code` generator lets you easily package TextMate themes, colorizers and snippets and create new extensions.  When the generator is run, it creates a complete standalone extension package for each option.  However it is often more convenient to have a single extension which combines multiple contributions.  For example, if you are adding support for a new language, you'd like to provide users with both the language definition with colorization and also snippets and perhaps even debugging support.
+`yo code`生成器能让你轻松打包文本主题、颜色设置和代码片段并创建新的扩展。当生成器运行时，它为每个选项创建一个完整的独立扩展包。然而很多时候我们更倾向于创建一个包含多个贡献点的扩展。比如说，如果你希望为一门新语言添加支持，则希望为用户提供带有代码着色的语言定义和代码段功能，甚至可以提供调试支持。
 
-To combine extension contributions, simply edit an existing extension manifest `package.json` and add the new contributions and associated files.
 
-Below is an extension manifest which includes a LaTex language definition (language identifier and file extensions), colorization (`grammar`), and snippets.
+要使能够结合扩展贡献，仅仅只需要编辑已经存在的清单文件`package.json`并添加新的贡献点和关联文件即可。
+
+以下是一个扩展的清单文件，它包含了Latex语言定义(语言标识符和文件扩展名)、着色器（`grammar`)和代码段。
 
 ```json
 {
@@ -200,18 +203,17 @@ Below is an extension manifest which includes a LaTex language definition (langu
 }
 ```
 
-Notice that the extension manifest `categories` attribute now includes both `Languages` and `Snippets` for easy discovery and filtering on the Marketplace.
+注意，扩展的清单文件中`categories`属性现在可以同时包含`Languages`和`Snippets`，这样方便在市场中查找和过滤。
 
->**Tip:** Make sure your merged contributions are using the same identifiers.  In the example above, all three contributions are using "latex" as the language identifier.  This lets VS Code know that the colorizer (`grammar`) and snippets are for the LaTeX language and will be active when editing LaTeX files.
+>**要点** 确保你的多个贡献点使用的是相同的标识符。在上例中，三个贡献点都是使用“latex”作为语言标识符。这让VS Code知道语法着色器和代码段是用于LaTeX语言并当编辑LaTex文件时激活它。
 
-## Next Steps
-To learn more about VS Code extensibility model, try these topic:
+## 下一步
+要想了解更多关于VS Code可扩展性模型， 可以查看这些主题：
 
-* [Contribution Points](/docs/extensionAPI/extension-points.md) - VS Code contribution points reference
-* [Activation Events](/docs/extensionAPI/activation-events.md) - VS Code activation events reference
-* [Extension Marketplace](/docs/editor/extension-gallery.md) - Read more about the VS Code Extension Marketplace
+* [贡献点](/docs/extensionAPI/extension-points.md) - VS Code 贡献点参考文档
+* [激活事件](/docs/extensionAPI/activation-events.md) - VS Code 激活事件文档
+* [扩展市场](/docs/editor/extension-gallery.md) - 了解更多的VS Code扩展市场
 
-## Common Questions
+## 常见问题
 
-Nothing yet
-
+暂无
