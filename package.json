@@ -1,8 +1,8 @@
 {
   "name": "vscode-docs",
-  "version": "0.10.3",
+  "version": "0.10.4",
   "author": {
-    "name": "Microsoft vscode-docs-CN"
+    "name": "VSCodeContributorsinChina"
   },
   "repository": {
     "type": "git",
