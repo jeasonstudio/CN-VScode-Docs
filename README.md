@@ -124,9 +124,9 @@ Visual Studio Code 是微软推出的跨平台编辑器。它采用经典的VS�
   * [API Debugging](https://code.visualstudio.com/docs/extensionAPI/api-debugging)
 
 * TOOLS
-  * [Publishing Tool](https://code.visualstudio.com/docs/tools/vscecli)
-  * [Extension Generator](https://code.visualstudio.com/docs/tools/yocode)
-  * [Samples](https://code.visualstudio.com/docs/tools/samples)
+  * ~~[Publishing Tool](https://code.visualstudio.com/docs/tools/vscecli)~~
+  * ~~[Extension Generator](https://code.visualstudio.com/docs/tools/yocode)~~
+  * ~~[Samples](https://code.visualstudio.com/docs/tools/samples)~~
 
 （翻译完成的，请使用删除线将对应划去,像下面这样）
 
@@ -149,6 +149,7 @@ Visual Studio Code 是微软推出的跨平台编辑器。它采用经典的VS�
 - [Albert C.](https://github.com/ccssooll999)
 - [Saier](https://github.com/279838089)
 - [iskcal](https://github.com/iskcal)
+- [No.20](https://github.com/zdt3476)
 
 
 （Fork 之后自行添加到最后）
