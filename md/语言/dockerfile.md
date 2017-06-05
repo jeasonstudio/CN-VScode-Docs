@@ -8,54 +8,55 @@ DateApproved: 4/14/2016
 MetaDescription: Find out how to get the best out of Visual Studio Code and Docker.
 ---
 
-# Working with Docker
+# 使用Docker工作
 
-[Docker](http://www.docker.com) is a very popular container platform that lets you easily package, deploy, and consume applications and services. Whether you are a seasoned Docker developer or just getting started, Visual Studio Code makes it easy to author `Dockerfile` and `docker-compose.yml` files in your workspace.
+[Docker](http://www.docker.com) 是现今十分热门的容器引擎，可以让你轻松地打包、部署和使用应用程序以及服务。无论你是一个经验丰富的Docker开发者还是刚刚开始学习它，Visual Studio Code都可以让你轻松地创造`Dockerfile`和`docker-compose.yml`两个文件到你的开发目录中。
 
-## Install the Docker extension
+## 安装Docker扩展插件
 
-Docker support for VS Code is provided by an extension.  To install the Docker extension, Press `kb(workbench.action.showCommands)`, type "ext install" and run the **Extensions: Install Extension** command to bring up the Marketplace extension list. Now type "docker" to filter the results and select the [Dockerfile and Docker Compose File (yml) Support](https://marketplace.visualstudio.com/items?itemName=PeterJausovec.vscode-docker) extension.
+VS Code通过插件的方式支持Docker的使用。安装这一扩展插件，只需要按下`kb(workbench.action.showCommands)`，然后输入"ext install"并且运行**Extensions: Install Extension**命令来获得目前支持的插件列表。现在输入docker搜索所需插件然后选择[Dockerfile and Docker Compose File (yml) Support](https://marketplace.visualstudio.com/items?itemName=PeterJausovec.vscode-docker)插件。
 
 ![Select Docker extension](images/docker/installdockerextension.png)
 
 ## Dockerfiles
 
-With Docker, you can build images by specifying the step by step commands needed to build the image in a `Dockerfile`. A Dockerfile is simply a text file that contains the build instructions.
+通过Docker，你可以指定一系列的命令，通过它们在`Dockerfile`中建立镜像。一个Dockerfile是包含着一系列安装指令的文本脚本。
 
-VS Code understands the structure of Dockerfiles as well as the available set of instructions, meaning we can give you a great experience when authoring these files in the tool.
+VS Code 很清楚Dockerfiles的结构以及可以使用的指令集，这意味着当你使用VS Code编辑这些文件时它可以给予你很多的经验指导。
 
-1. Create a new file in your workspace named `Dockerfile`
-2. Press `kb(editor.action.triggerSuggest)` to bring up a list of snippets corresponding to valid `Dockerfile` commands
+1. 在你的工作目录中创建一个新的文件命名为`Dockerfile`
+2. 按下`kb(editor.action.triggerSuggest)`来获得`Dockerfile`中命令的补全
 
  ![Dockerfile snippets](images/docker/dockerfileintellisense.png)
 
-3. Press `kbstyle(Tab)` to move between fields within the snippet. For example, with the `COPY` snippet you can fill in the `source` and then press `kbstyle(Tab)` to move to the `dest` field.
+3. 按下`kbstyle(Tab)`在段落中不同的区域移动。比如说，在`COPY`部分你可以输入`source`，接着按下`kbstyle(Tab)`移动到`dest`部分。
 
  ![Dockerfile snippet navigation](images/docker/dockerfiletemplate.png)
 
-In addition to snippets for authoring your `Dockerfile`, Visual Studio Code will provide you with a description of any Docker command you hover over with the mouse. For example, when hovering over `WORKDIR` you will see the following.
+除了编辑`Dockerfile`时的各种功能，当你防止鼠标在一个Docker命令上的时候，Visual Studio Code将会提供关于这个命令的描述。比如说，当你的鼠标放到`WORKDIR`上面的时候你将可以看到以下描述。
 
 ![Dockerfile hover tooltip](images/docker/dockerfiletooltip.png)
 
-For more information on Dockerfiles, check out [Dockerfile best practices](
-https://docs.docker.com/articles/dockerfile_best-practices/) on [docker.com](http://docker.com).
+想要获取更多关于Dockerfiles的信息，可以进入在[docker.com](http://docker.com)上面的[Dockerfile best practices](
+https://docs.docker.com/articles/dockerfile_best-practices/)
 
-## Docker Compose
+## Docker compose
 
-[Docker Compose](https://docs.docker.com/compose/) lets you define and run multi-container applications with Docker. You define what the shape of these containers look like with a file called `docker-compose.yml`.
+[Docker Compose](https://docs.docker.com/compose/)让你可以通过Docker定义以及运行多容器应用。你可以通过一个叫做`docker-compose.yml`的文件来定义容器的外形。
 
-Visual Studio Code's experience for authoring `docker-compose.yml` is also very rich, providing IntelliSense for valid Docker compose directives and it will query Docker Hub for metadata on public Docker images.
+对于`docker-compose.yml`的经验，Visual Studio Code的功能同样也是十分丰富的。它可以为合法的Docker compose指令提供IntelliSense和在帮助你查询Docker Hub找到适合的镜像。
 
-1. Create a new file in your workspace called `docker-compose.yml`
-2. Define a new service called `web:`
-3. On the second line, bring up IntelliSense by pressing `kb(editor.action.triggerSuggest)` to see a list of all valid compose directives.
+1. 在你的工作目录中创建一个名为`docker-compose.yml`的新文件
+2. 定义一个新的服务成为`web:`
+3. 在第二行，通过`kb(editor.action.triggerSuggest)`引入IntelliSense来查看所有合法的指令列表
 
  ![Docker Compose IntelliSense](images/docker/dockercomposeintellisense.png)
 
-4. For the `image` directive, you can press `kb(editor.action.triggerSuggest)` again and VS Code will query the Docker Hub index for public images.
+
+4. 对于`image`指令，你可以再次输入`kb(editor.action.triggerSuggest)`来完成，而且VS Code会帮你在Docker Hub上查询公开的镜像。
 
  ![Docker Compose image suggestions](images/docker/dockercomposeimageintellisense.png)
 
-VS Code will first show a list of popular images along with metadata such as the number of stars and description. If you continue typing VS Code will query the Docker Hub index for matching images, including searching public profiles. For example, searching for `Microsoft` will show you all the public Microsoft images.
+VS Code 第一次使用会根据一些元数据比如说star的数量和描述去为你显示一系列热门的镜像。如果你继续输入，VS code会查询Docker Hub的索引去找到更加符合的镜像，包括搜索公开的profiles。比如说，搜索`Microsoft`会显示所有微软的镜像。
 
  ![Docker Compose Microsoft image suggestions](images/docker/dockercomposesearch.png)
