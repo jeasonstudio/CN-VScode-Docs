@@ -33,7 +33,7 @@ VS Code 很清楚Dockerfiles的结构以及可以使用的指令集，这意味�
 
  ![Dockerfile snippet navigation](images/docker/dockerfiletemplate.png)
 
-除了编辑`Dockerfile`时的各种功能，当你防止鼠标在一个Docker命令上的时候，Visual Studio Code将会提供关于这个命令的描述。比如说，当你的鼠标放到`WORKDIR`上面的时候你将可以看到以下描述。
+除了编辑`Dockerfile`时的各种功能，当你放置鼠标在一个Docker命令上的时候，Visual Studio Code将会提供关于这个命令的描述。比如说，当你的鼠标放到`WORKDIR`上面的时候你将可以看到以下描述。
 
 ![Dockerfile hover tooltip](images/docker/dockerfiletooltip.png)
 
@@ -44,7 +44,7 @@ https://docs.docker.com/articles/dockerfile_best-practices/)
 
 [Docker Compose](https://docs.docker.com/compose/)让你可以通过Docker定义以及运行多容器应用。你可以通过一个叫做`docker-compose.yml`的文件来定义容器的外形。
 
-对于`docker-compose.yml`的经验，Visual Studio Code的功能同样也是十分丰富的。它可以为合法的Docker compose指令提供IntelliSense和在帮助你查询Docker Hub找到适合的镜像。
+对于`docker-compose.yml`，Visual Studio Code的功能同样也是十分丰富的。它可以为合法的Docker compose指令提供IntelliSense,以及帮助你查询Docker Hub找到适合的镜像。
 
 1. 在你的工作目录中创建一个名为`docker-compose.yml`的新文件
 2. 定义一个新的服务成为`web:`
