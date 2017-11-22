@@ -1,5 +1,6 @@
 Microsoft Visual Studio Code 中文手册
 ===============
+9999
 
 #### DEMO：[https://jeasonstudio.gitbooks.io/vscode-cn-doc/content/](https://jeasonstudio.gitbooks.io/vscode-cn-doc/content/)
 
