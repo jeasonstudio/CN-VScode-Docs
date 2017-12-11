@@ -495,7 +495,7 @@ to display a [GitHub Octicon](https://octicons.github.com) `pencil` icon to the 
 
 ## 销毁插件资源  Disposing Extension Resources
 
-我们将在[销毁](/docs/extensions/patterns-and-principles.md#disposables)里跟深入的而学习如何销毁插件
+我们将在[销毁](/docs/extensions/patterns-and-principles.md#disposables)里更深入的而学习如何销毁插件。
 
 一个插件在激活的时候传入一个有Disposable集合类型的`subscriptions`的`ExtensionContext`对象。你的插件可以向这个集合中添加自己的可销毁对象，VS Code将在插件关闭时销毁这些对象。
 
