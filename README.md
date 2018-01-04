@@ -154,6 +154,7 @@ Visual Studio Code 是微软推出的跨平台编辑器。它采用经典的VS�
 - [Sophia Woo](https://github.com/SophiaWoo)
 - [distantmars](https://github.com/distantmars)
 - [mrkou47](https://github.com/MrKou47)
+- [ichengde](https://github.com/ichengde)
 
 
 （Fork 之后自行添加到最后）
