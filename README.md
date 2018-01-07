@@ -79,7 +79,7 @@ Visual Studio Code 是微软推出的跨平台编辑器。它采用经典的VS�
   * ~~[User and Workspace Settings](https://code.visualstudio.com/docs/customization/userandworkspace)~~
   * ~~[Key Bindings](https://code.visualstudio.com/docs/customization/keybindings)~~
   * ~~[Snippets](https://code.visualstudio.com/docs/customization/userdefinedsnippets)~~
-  * ~~[Colorizer](https://code.visualstudio.com/docs/customization/colorizer)~~
+  * [Colorizer](https://code.visualstudio.com/docs/customization/colorizer)
   * ~~[Themes](https://code.visualstudio.com/docs/customization/themes)~~
   * ~~[Display Language](https://code.visualstudio.com/docs/customization/locales)~~
 
@@ -155,6 +155,7 @@ Visual Studio Code 是微软推出的跨平台编辑器。它采用经典的VS�
 - [distantmars](https://github.com/distantmars)
 - [mrkou47](https://github.com/MrKou47)
 - [ichengde](https://github.com/ichengde)
+- [bee0060](https://github.com/bee0060)
 
 
 （Fork 之后自行添加到最后）
