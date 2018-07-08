@@ -58,7 +58,7 @@ Visual Studio Code 是微软推出的跨平台编辑器。它采用经典的VS�
 ## 正在翻译文章+作者
 
 * Principles and Patterns + guonanci
-* Testing Extension + guonanci
+* Running and Debugging Your Extension + guonanci
 * Testing Extension + guonanci
 * Our Approach + guonanci
 
