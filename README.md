@@ -58,6 +58,7 @@ Visual Studio Code 是微软推出的跨平台编辑器。它采用经典的VS�
 ## 正在翻译文章+作者
 
 * AllOfIt + Jeason
+
 ## 项目翻译目录
 
 * ~~[Overview](https://code.visualstudio.com/docs)~~
