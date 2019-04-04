@@ -35,6 +35,7 @@
 ### 选择一个 Python 解释器
 Python 是一种解释型语言，为了运行 Python 代码及获得智能提示，你必须告诉 VS Code 使用哪个解释器。
 在 VS Code 内，通过打开 **命令面板**（⇧⌘P），输入 **Python: 选择解释器** 来检索，然后选择对应命令。如果可用的话，你也可以使用状态栏上的 **选择Python环境** 选项，（也可能状态栏已经显示了一个已选的解释器）：
+
 ![select-python-environment](images/python-tutorial/select-python-environment.png)
 
 命令板会自动展示 VS Code 能够找到的可用解释器列表，包括虚拟环境。如果你没有找到期望的解释器，参考一下 [配置 Python 环境](https://code.visualstudio.com/docs/python/environments)。
@@ -44,9 +45,11 @@ Python 是一种解释型语言，为了运行 Python 代码及获得智能提�
 
 ### 创建一个 Python Hello World 源代码文件
 在文件浏览工具栏中，点击 `hello`目录上的 新建文件按钮：
+
 ![new-file](images/python-tutorial/new-file.png)
 
 命名为 `hello.py`，这个文件会在编辑器中自动打开：
+
 ![create-hellopy](images/python-tutorial/create-hellopy.png)
 
 通过使用 `.py`文件后缀，你告知 VS Code 将这个文件解释为一个 Python 程序，以便 VS Code 使用 Python 扩展及所选择的解释器分析所含内容。
@@ -57,9 +60,11 @@ msg = "Hello World"
 print(msg)
 ```
 当你开始输入 `print`，注意 [智能提示](https://code.visualstudio.com/docs/editor/intellisense) 是如何提示自动补全选项的。
+
 ![intellisense-print](images/python-tutorial/intellisense-print.png)
 
 智能提示和自动补全适用于标准 Python 模块以及安装到所选 Python 解释器环境里的其他软件包。同样的，它会为对象类型提供可用的方法补全。举个例子，因为 `msg`变量包含一个字符串，当你输入 `msg.` 的时候智能提示会提供字符串方法：
+
 ![intellisense-msg](images/python-tutorial/intellisense-msg.png)
 
 尽情地体验一下智能提示，然后撤销修改使只保留 `msg`变量及调用 `print`方法，再保存这个文件（⌘S）。
@@ -70,10 +75,13 @@ print(msg)
 
 
 使用 Python 运行 `hello.py`很简单。在编辑器中单击右键然后选择 **在终端中运行Python文件**（也会自动保存文件）：
+
 ![run-python-in-terminal](images/python-tutorial/run-python-in-terminal.png)
 
 这个操作会打开终端面板并自动激活你的 Python 解释器，然后运行 `python3 hello.py`(macOS/Linux) 或者 `python hello.py`(Windows)：
+
 ![terminal](images/python-tutorial/terminal.png)
+
 你还可以使用另外两种方式在 VS Code 中运行 Python：
 
 * 选中一行或多行，然后按 `Shift+Enter` 组合键或者点击右键并选择 **在Python终端中运行选中内容/行**。这个命令对于测试文件的一部分很方便。
@@ -82,13 +90,21 @@ print(msg)
 ### 配置及运行调试器
 让我们现在尝试一下调试简单的 Hello World 程序。
 首先，通过将光标放在 `print`调用处并按下 F9 在 `hello.py`中第2行设置一个断点。或者就点击一下编辑器中的左边槽，在行号旁边。当你设置了断点后，边槽中会出现一个红色圆圈。
+
 ![breakpoint](images/python-tutorial/breakpoint.png)
+
 接下来，选择边栏上的调试视图：
+
 ![debug](images/python-tutorial/debug.png)
+
 然后选择调试工具栏上的配置图标（或者使用 **调试 > 打开配置 菜单命名**）：
+
 ![debug-open-configurations](images/python-tutorial/debug-open-configurations.png)
+
 稍等一会儿，这个命令会创建一个 `launch.json`文件，包含一系列配置项并出现在下拉选项中：
+
 ![debug-configuration](images/python-tutorial/debug-configuration.png)
+
 **注意：** VS Code 对于各种配置项都使用 JSON 文件；`launch.json` 就是一个包含调试配置项文件的标准名称。
 
 这些不同的配置项都在 [调试配置项](https://code.visualstudio.com/docs/python/debugging) 中有完整的解释；当前而言，只用选中 **Python：当前文件（集成终端）**，这个配置项会使用当前选择的 Python 解释器运行编辑器当前显示的文件。
@@ -113,14 +129,17 @@ print(msg)
 >**提示：** 想为 Python 程序指定命令行参数，在配置中添加一行 `"args": []`，然后把各个参数作为元素放在 `[]`列表中，参考 [调试 - 参数]（（/docs/python/debugging#_args）。
 
 切换到编辑器中的 `hello.py`，然后通过选择调试工具栏上的箭头或者按下 F5 来运行调试器。调试器在文件第一行上的断点暂停（如果 `stopOnEntry`设置为 ture 的话则会直接停在第一行）。当前所在行在左侧会有一个黄色箭头标识出来。如果你停在第一行并在这个时候检查 **Local** 变量面板，你会看到只有自动化的双下划线变量被定义了：
+
 ![locals](images/python-tutorial/locals.png)
 
 一个调试工具栏会出现在顶部，从左至右依次是以下命令：继续/continue（F5），单步跳过/step over（F10），单步调试/step into（F11），单步跳出/step out（⇧F11），重启/restart（⇧⌘F5），以及 停止/stop（⇧F5）。
+
 ![debug-toolbar](images/python-tutorial/debug-toolbar.png)
 
 状态栏也会改变颜色（大多数主题中会是橙色）以标识出你正处于调试模式。**Python 调试控制台**也同样会自动出现在右侧面板下部，用以展示正在执行的命令及程序输出。
 
 想要继续运行程序，选择调试工具栏上的继续命令（F5）。调试器会运行程序直到下一个断点。刚刚定义的 `msg`变量会出现在 **Local**面板中：
+
 ![locals-msg](images/python-tutorial/locals-msg.png)
 
 你可以在**调试控制台**中使用变量（如果你没有看到，就在 VS Code 右下方区域中选择**调试控制台**，或者..从菜单中选择。）然后试着在 控制台底部的 > 提示处一行一行的输入以下代码：
@@ -129,6 +148,7 @@ msg
 msg.capitalize()
 msg.split()
 ```
+
 ![debug-console](images/python-tutorial/debug-console.png)
 再次选择工具栏上的蓝色继续按钮（或者按下 F5 ）运行程序至结束。
 如果你切换回 **Python调试控制台**，“Hello World” 会出现在里面，一旦程序执行完成，VS Code 就会退出调试模式。
@@ -208,6 +228,7 @@ sudo apt-get install python3-tk
 python3 -m pip install matplotlib
 ```
 现在返回程序中（开启或不开启调试器都行）稍等片刻，一个带有输出的绘图窗口将会出现：
+
 ![plot](images/python-tutorial/plot.png)
 
 ### 使用虚拟环境
