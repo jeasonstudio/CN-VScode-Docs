@@ -36,31 +36,44 @@ By setting `go.autocompleteUnimportedPackages` to `true` in your [settings](/doc
 >**Tip**: 用 `kb(editor.action.triggerSuggest)` 来手动触发建议.  
 
 
-### Hover Information
+### 悬浮信息  Hover Information
 
-Hovering on any variable, function, or struct will give you information on that item such as documentation, signature, etc.
+Hovering on any variable, function, or struct will give you information on that item such as documentation, signature, etc.  
+
+在任何变量，函数或者结构体上悬浮，可以提供对应的信息，例如注释，参数等等。
 
 ![Information on hover](images/go/hover.png)
 
-By default, the extension uses `godef` and `godoc` to get this information. You can choose to use `gogetdoc` instead by changing the setting `go.docsTool` in your User or Workspace Settings.
+By default, the extension uses `godef` and `godoc` to get this information. You can choose to use `gogetdoc` instead by changing the setting `go.docsTool` in your User or Workspace Settings.  
+
+默认情况，扩展使用`godef` 和 `godoc`获取这些信息。你可以选择使用`gogetdoc`代替。设置方法：改变用户设置或工作空间设置中的`go.docsTool`。
 
 ### Signature help
 
-When you open the `(` while calling a function, a pop-up provides signature help for the function. As you keep typing the parameters, the hint (underline) moves to the next parameter.
+When you open the `(` while calling a function, a pop-up provides signature help for the function. As you keep typing the parameters, the hint (underline) moves to the next parameter.  
+
+当你调用函数时，打出`(`，一个弹窗为函数提供参数帮助。当你输入一些参数，提示（下划线）移动到下一个参数。
 
 ![Signature Help](images/go/signaturehelp.png)
 
->**Tip**: Use `kb(editor.action.triggerParameterHints)` to manually trigger the signature help when the cursor is inside the `()` in the function call.
+>**Tip**: Use `kb(editor.action.triggerParameterHints)` to manually trigger the signature help when the cursor is inside the `()` in the function call.  
 
-The extension's signature help also uses `godef` and `godoc`. You can choose to use `gogetdoc` instead by changing the setting `go.docsTool` in your User or Workspace Settings.
+>**Tip**: 当光标在函数调用的`()`之内，用 `kb(editor.action.triggerParameterHints)` 去手动触发参数帮助。
 
-## Code navigation
+The extension's signature help also uses `godef` and `godoc`. You can choose to use `gogetdoc` instead by changing the setting `go.docsTool` in your User or Workspace Settings.    
 
-Code navigation features are available in the context menu in the editor.
+扩展的参数帮助也使用 `godef` 和 `godoc`。你可以选择使用`gogetdoc`代替。设置方法：改变用户设置或工作空间设置中的`go.docsTool`。
+
+## 代码导航  Code navigation
+
+Code navigation features are available in the context menu in the editor.  
+
+代码导航特性适用于编辑器中的文本菜单。
 
 - **Go To Definition** `kb(editor.action.revealDefinition)` - Go to the source code of the type definition.
 - **Peek Definition** `kb(editor.action.peekDefinition)` - Bring up a Peek window with the type definition.
 - **Go to References** `kb(editor.action.goToReferences)` - Show all references for the type.
+
 
 You can navigate via symbol search using the **Go to Symbol** commands from the **Command Palette** (`kb(workbench.action.showCommands)`).
 
