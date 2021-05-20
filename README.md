@@ -87,7 +87,7 @@ Visual Studio Code 是微软推出的跨平台编辑器。它采用经典的VS�
   * ~~[Overview](https://code.visualstudio.com/docs/languages/overview)~~
   * ~~[JavaScript](https://code.visualstudio.com/docs/languages/javascript)~~
   * ~~[C#](https://code.visualstudio.com/docs/languages/csharp)~~
-  * ~~[C++](https://code.visualstudio.com/docs/languages/cpp)~~
+  * [C++](https://code.visualstudio.com/docs/languages/cpp)
   * ~~[JSON](https://code.visualstudio.com/docs/languages/json)~~
   * ~~[HTML](https://code.visualstudio.com/docs/languages/html)~~
   * ~~[PHP](https://code.visualstudio.com/docs/languages/php)~~
@@ -157,6 +157,7 @@ Visual Studio Code 是微软推出的跨平台编辑器。它采用经典的VS�
 - [ichengde](https://github.com/ichengde)
 - [bee0060](https://github.com/bee0060)
 - [nanci](https://github.com/guonanci)
+- [FdeCad](https://github.com/FdeCad)
 
 
 （Fork 之后自行添加到最后）
