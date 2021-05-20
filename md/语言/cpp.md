@@ -16,7 +16,7 @@ C/C++ support for Visual Studio Code is provided today as a preview of our work 
 
 If you just want a lightweight tool to edit your C++ files VS Code has you covered wherever you are, but if you want the best possible experience for your existing Visual C++ projects or debugging on Windows, we recommend you use a version of Visual Studio such as [Visual Studio Community](https://www.visualstudio.com/products/visual-studio-community-vs).
 
-如果你只是想一个轻量级的工具来编辑你的C++文件，无论你在哪里VSCode都已经被覆盖。但如果你想在Windows下调试您现有的Visual C ++项目，最佳的体验，我们推荐您使用[Visual Studio社区]版本的Visual Studio。
+如果您只想使用轻巧的工具来编辑C ++文件，无论您身在何处，VS Code都可以满足您，但如果你想在Windows下调试您现有的Visual C ++项目并获得最佳的体验，我们推荐您使用[Visual Studio社区]版本的Visual Studio。
 
 Because we're still shaping the C++ experience in VS Code, now is a great time to [provide bug reports, feature requests, and feedback](mailto:c_cpp_support@microsoft.com), and for those of you who use Linux or OS X as your development environment to [get engaged](http://landinghub.visualstudio.com/c-nonwin) with the Visual Studio team.
 
