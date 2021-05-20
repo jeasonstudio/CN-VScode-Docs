@@ -1,193 +1,210 @@
 ---
-Order: 4
+Order: 9
 Area: languages
 TOCTitle: C++
 ContentId: D06C8C5C-2D3A-4B2E-B31F-12F1907E6402
 PageTitle: C++ programming with Visual Studio Code
-DateApproved: 3/29/2016
+DateApproved: 12/13/2020
 MetaDescription: Find out how to get the best out of Visual Studio Code and C++.
+MetaSocialImage: images/cpp/languages_cpp.png
 ---
+# C/C++ for Visual Studio Code
 
-# C/C++ for VS Code (预览)(Preview)
+C/C++ support for Visual Studio Code is provided by a [Microsoft C/C++ extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) to enable cross-platform C and C++ development on Windows, Linux, and macOS.
 
-C/C++ support for Visual Studio Code is provided today as a preview of our work to enable cross-platform C and C++ development using VS Code on Windows, Linux, and OS X. Our focus in this preview release is code editing and navigation support for C and C++ code everywhere that VS Code runs, as well as debugging on Linux (Ubuntu 14.04 64-bit) and OS X (see _Known limitations_ below).
+[Microsoft C / C ++扩展]（https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools）提供了对Visual Studio Code的C / C ++支持，从而可以在以下平台上进行跨平台的C和C ++开发： Windows，Linux和macOS。
 
-今天作为我们工作的预览，C/C++ support for VS Code 被提供出来。它能够在Windows，Linux和OS X上跨平台开发C和C++。 我们这个预览版的重点是代码编辑和在任何运行VS Code中的C 和 C++ 的代码导航，以及在Linux(Ubuntu 14.04 64-bit)和OS X下的调试（参见下文_Known limitations_）。
+![cpp extension](images/cpp/cpp-extension.png)
 
-If you just want a lightweight tool to edit your C++ files VS Code has you covered wherever you are, but if you want the best possible experience for your existing Visual C++ projects or debugging on Windows, we recommend you use a version of Visual Studio such as [Visual Studio Community](https://www.visualstudio.com/products/visual-studio-community-vs).
+## Install the extension
+## 安装扩展
 
-如果您只想使用轻巧的工具来编辑C ++文件，无论您身在何处，VS Code都可以满足您，但如果你想在Windows下调试您现有的Visual C ++项目并获得最佳的体验，我们推荐您使用[Visual Studio社区]版本的Visual Studio。
+1. Open VS Code.
+1. Select the Extensions view icon on the Activity bar or use the keyboard shortcut (`kb(workbench.view.extensions)`).
 
-Because we're still shaping the C++ experience in VS Code, now is a great time to [provide bug reports, feature requests, and feedback](mailto:c_cpp_support@microsoft.com), and for those of you who use Linux or OS X as your development environment to [get engaged](http://landinghub.visualstudio.com/c-nonwin) with the Visual Studio team.
+2.选择活动栏上的扩展视图图标或使用键盘快捷键（`kb（workbench.view.extensions）`）。
 
-因为在VS Code中，我们还在积累 C++ 的经验。现在是一个[提供错误报告，请求功能和反馈](mailto:c_cpp_support@microsoft.com)的最好的时间。并请那些在使用Linux或OS X作为开发环境的人，[参与](http://landinghub.visualstudio.com/c-nonwin)Visual Studio团队的工作。
+3. Search for `'C++'`.
+4. Select **Install**.
 
-## Installing C++ 安装C++   Installing C++ support安装C++支持
+![Search for c++ in the Extensions view](images/cpp/search-cpp-extension.png)
 
-C++ language support is an optional [install from the Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools). Or, just install it from VS Code by launching the __Quick Open__ (`kb(workbench.action.quickOpen)`) and then entering the command **ext install cpptools**.
+After you install the extension, when you open or create a `*.cpp` file, you will have syntax highlighting (colorization), smart completions and hovers (IntelliSense), and error checking.
 
-C++ 语言支持是一个可选安装，[从Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)。或者，仅需要从VS Code启动__Quick Open__ (`kb(workbench.action.quickOpen)`)然后输入名令**ext install cpptools**来安装它。
+安装扩展程序后，打开或创建`* .cpp`文件时，将具有语法高亮显示（着色），智能补全和悬停（IntelliSense）以及错误检查。
 
-On Linux, there's an additional step that installs dependencies necessary for debugging support. When VS Code restarts after installing the extension, a script installs the [dotnet cli](http://dotnet.github.io/) dependency. Because elevated permissions are needed to install this package, you'll be prompted for your password in the terminal where the script is running. If you'd rather perform these last steps yourself, you can close the terminal now, then enter the commands yourself (these steps must be completed to enable debugging support.) For more information on these commands, see _Manual Installation for the C++ Debugger extension_ in the [README](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools).
+![C++ language features](images/cpp/msg-intellisense.png)
 
-在Linux上，为了支持调试，而必需额外的安装依赖。当VS Code安装扩展后重新启动后，脚本会安装[dotnet cli](http://dotnet.github.io/) 依赖。因为需要提升权限才能安装该软件包，你会被提示在脚本运行的终端输入密码。如果您愿意执行这些步骤，最后你可以关闭终端，然后输入你自己命令开始工作（为了启用调试支持，这些步骤必须完成。）。有关这些命令的详细信息，请参考_手动安装C++调试扩展_ 中的[README](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools).
+## Install a compiler
+## 安装一个编译器
 
-On OS X, additional install steps need to be completed manually to enable debugging on OS X. See _Manual Installation for the C++ Debugger extension_ in the [README](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools).
+C++ is a compiled language meaning your program's source code must be translated (compiled) before it can be run on your computer. VS Code is first and foremost an editor, and relies on command-line tools to do much of the development workflow. The C/C++ extension does not include a C++ compiler or debugger. You will need to install these tools or use those already installed on your computer.
 
-在OS X上，对于在OS X上调试，额外的安装步骤需要手工完成。请参考_手动安装C++调试扩展_ 中的[README](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools).
+C ++是一种编译语言，这意味着您的程序的源代码必须先经过翻译（编译），然后才能在计算机上运行。 VS Code首先是编辑器，并且依靠命令行工具来完成大部分开发工作流程。 C / C ++扩展不包括C ++编译器或调试器。 您将需要安装这些工具或使用计算机上已经安装的工具。
 
+There may already be a C++ compiler and debugger provided by your academic or work development environment. Check with your instructors or colleagues for guidance on installing the recommended C++ toolset (compiler, debugger, project system, linter).
 
-## Navigating code
-## 代码导航
+您的学术或工作开发环境可能已经提供了C ++编译器和调试器。 请与您的导师或同事联系，以获取有关安装推荐的C ++工具集（compiler，debugger，project system，linter）的指导。
 
-### Search for Symbols
-### 按符号查找
+Some platforms, such as Linux or macOS, have a C++ compiler already installed. Most Linux distributions have the [GNU Compiler Collection](https://wikipedia.org/wiki/GNU_Compiler_Collection) (GCC) installed and macOS users can get the [Clang](https://wikipedia.org/wiki/Clang) tools with [XCode](https://developer.apple.com/xcode/).
 
-You can search for symbols in the current file or workspace to navigate your code more quickly.
+某些平台，例如Linux或macOS，已经安装了C ++编译器。 大多数Linux发行版都安装了[GNU编译器集合]（https://wikipedia.org/wiki/GNU_Compiler_Collection）（GCC），并且macOS用户可以获取[Clang]（https://wikipedia.org/wiki/Clang）工具 使用[XCode]（https://developer.apple.com/xcode/）。
 
-您可以在当前文件或工作区中搜索符号，以更快地浏览代码。
+### Check if you have a compiler installed
+### 检查您是否安装了编译器
 
-To search for a symbol in the current file, press `kb(workbench.action.gotoSymbol)`, then enter the name of the symbol you're looking for. A list of potential matches will appear and be filtered as you type. Choose from the list of matches to navigate to its location.
+Make sure your compiler executable is in your platform path (`%PATH` on Windows, `$PATH` on Linux and macOS) so that the C/C++ extension can find it. You can check availability of your C++ tools by opening the Integrated Terminal (`kb(workbench.action.terminal.toggleTerminal)`) in VS Code and trying to directly run the compiler.
 
-按`kb(workbench.action.gotoSymbol)`，在当前文件中搜索符号，然后输入您要查找的符号的名称。出现潜在匹配项的列表，并在您键入时对其进行过滤。 从匹配项列表中选择以导航至其位置。
+确保编译器可执行文件在平台路径中（在Windows中为`％PATH`，在Linux和macOS中为`$ PATH`），以便C / C ++扩展可以找到它。 您可以通过在VS Code中打开集成终端（“ kb（workbench.action.terminal.toggleTerminal）”）并尝试直接运行编译器来检查C ++工具的可用性。
 
-![Searching the current file](images/cpp/filesearch.png)
+Checking for the GCC compiler `g++`:
 
-To search for a symbol in the current workspace, start by pressing `kb(workbench.action.showAllSymbols)` instead, then enter the name of the symbol. A list of potential matches will appear as before. If you choose a match that was found in a file that's not already open, the file will be opened before navigating to the match's location.
+检查GCC编译器 `g++`：
 
-要在当前工作空间中搜索符号，首先按 `kb(workbench.action.showAllSymbols)` ，然后输入您要查找的符号的名称。可能的匹配项列表将像以前一样显示。 如果选择在尚未打开的文件中找到的匹配项，则将在导航到该匹配项的位置之前打开该文件。
+```bash
+g++ --version
+```
 
-![Searching in your workspace](images/cpp/workspacesearch.png)
+Checking for the Clang compiler `clang`:
 
-Alternatively, you can search for symbols by accessing these commands through the __Command Palette__ if you prefer. Use __Quick Open__ (`kb(workbench.action.quickOpen)`) then enter the '@' command to search the current file, or the '#' command to search the current workspace. `kb(workbench.action.gotoSymbol)` and `kb(workbench.action.showAllSymbols)` are just shortcuts for the '@' and '#' commands, respectively, so everything works the same.
+检查Clang编译器`clang`：
 
-另外，您也可以根据需要通过__Command Palette__访问这些命令来搜索符号。使用 __Quick Open__ (`kb(workbench.action.quickOpen)`)然后输入“ @”命令搜索当前文件，或输入“＃”命令搜索当前工作空间。'kb(workbench.action.gotoSymbol)'和'kb(workbench.action.showAllSymbols)'分别只是“ @”和“＃”命令的快捷方式，因此所有工作均相同。
+```bash
+clang --version
+```
 
-### Peek Definition
-### 查看定义
+> **Note**: If you would prefer a full Integrated Development Environment (IDE), with built-in compilation, debugging, and project templates (File > New Project), there are many options available, such as the [Visual Studio Community](https://visualstudio.microsoft.com/vs/community) edition.
 
-You can take a quick look at how a symbol was defined by using the Peek Definition feature. This feature displays a few lines of code near the definition inside a peek window so you can take a look without navigating away from your current location.
+If you don't have a compiler installed, in the example below, we describe how to install the Minimalist GNU for Windows (MinGW) C++ tools (compiler and debugger). MinGW is a popular, free toolset for Windows. If you are running VS Code on another platform, you can read the [C++ tutorials](#tutorials), which cover C++ configurations for Linux and macOS.
 
-您可以快速查看如何使用“查看定义”功能定义符号。 此功能在窥视窗口内的定义附近显示几行代码，因此您无需离开当前位置即可查看。
+## Example: Install MinGW-x64
 
-To peek at a symbol's definition, place your cursor on the symbol anywhere its used in your code and then press `kb(editor.action.previewDeclaration)`. Alternatively, you can choose __Peek Definition__ from the context menu (right-click, then choose __Peek Definition__). 
+We will install Mingw-w64 via the SourceForge website. You can use this [Mingw-w64 link](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/installer/mingw-w64-install.exe/download) to download the Windows Mingw-w64 installer.
 
-![Peek definition](images/cpp/peekdefn.png)
+1. Run the installer, which should be named `mingw-w64-install.exe` in your Download folder.
 
-Currently, the C/C++ extension doesn't parse code in a way that helps it distinguish between competing definitions based on how the symbol is used. These competing definitions arise when the symbol defines different things in different contexts, such as occurs with overloaded functions, classes and their constructors, and other situations. When this happens, each of the competing definitions are listed in the right-hand side of the peek window with the source code of the current selection displayed on the left.
+   ![MinGW installation dialog welcome page](images/cpp/welcome-mingw-w64.png)
 
-With the peek window open, you browse the list of competing definitions to find the one you're interested in. If you want to navigate to the location of one of the definitions just double-click the definition you're interested in, or by double-clicking anywhere in the source code displayed on the left-hand side of the peek window. 
+2. For **Architecture** select **x86_64** and then select **Next**.
 
-### Go to Definition
+   ![Choose x86_64 on the MinGW settings page](images/cpp/choose-x86-64.png)
 
-You can also quickly navigate to where a symbol is defined by using the Go to Definition feature.
+3. On the **Installation Folder** page, use the default location for the **Destination folder**. Copy the location as you will need it later.
+4. Select **Next** to start the installation.
 
-To go to a symbol's definition, place your cursor on the symbol anywhere its used in your code and then press `kb(editor.action.goToDeclaration)`. Alternatively, you can choose __Go to Definition__ from the context menu (right-click, then choose __Go to Definition__). When there's only one definition of the symbol, you'll navigate directly to its location, otherwise the competing definitions are displayed in a peek window as described in the previous section and you have to choose the definition that you want to go to.
+### Add the MinGW compiler to your path
 
-## Debugging
+Add the path to your Mingw-w64 `bin` folder to the Windows `PATH` environment variable by using the following steps:
 
-Debugging is supported on Linux (Ubuntu 14.04 64-bit) and OS X (see Known limitation below).
+   1. In the Windows search bar, type 'settings' to open your Windows Settings.
+   1. Search for **Edit environment variables for your account**.
+   1. Choose the `Path` variable and then select **Edit**.
+   1. Select **New** and add the Mingw-w64 destination folder path, with `\mingw64\bin` appended, to the system path. The exact path depends on which version of Mingw-w64 you have installed and where you installed it. If you used the settings above to install Mingw-w64, then add this to the path: `C:\Program Files\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin`.
+   1. Select **OK** to save the updated PATH. You will need to reopen any console windows for the new PATH location to be available.
 
-### Preparing your launch.json file for debugging
+### Check your MinGW installation
 
-Before you can debug your app you'll need to set a few things up. Navigate to the Debug View (click the debug icon in the toolbar on the left-hand side of the VS Code window) then in the __Debug Panel__, click the __Settings__ icon and select `C++ Launch (GDB)`. This opens the ```launch.json``` file for editing.
+To check that your Mingw-w64 tools are correctly installed and available, open a **new** Command Prompt and type:
 
-![launch.json](images/cpp/launchjson.png)
+```bash
+g++ --version
+gdb --version
+```
 
-This file, ```launch.json```, contains configurations that tell the debugger how to interact with your app. Two configurations are included by default -- one that defines the properties for launching your app under GDB from VS Code, and another that defines the properties for attaching GDB to a process that's already running. Note that launching your app under GDB is not currently supported on OS X, for now you have to use Attach to debug OS X apps.
+If you don't see the expected output or `g++` or `gdb` is not a recognized command, check your installation (Windows **Control Panel** > **Programs** > **Programs and Features**) and make sure your PATH entry matches the Mingw-w64 binary location where the compiler tools are located.
 
-At the minimum, you'll need to update the 'program' property to contain the program name and path, but you can modify other properties as well. You can view a tooltip that describes each property and its possible values by placing your cursor over a property. For more information about the properties inside the launch.json file and how to use them, see the VS Code [debugging documentation](/docs/editor/debugging.md).
+## Hello World
 
-After your launch.json file is configured you're ready to start debugging, but remember that VS Code won't rebuild your program when you make changes to it between debugging sessions unless you also create a task.json file to invoke the build and set it as the preLaunchTask property in the launch.json file
+To make sure the compiler is installed and configured correctly, we'll create the simplest Hello World C++ program.
 
-### Conditional Breakpoints
+Create a folder called "HelloWorld" and open VS Code in that folder (`code .` opens VS Code in the current folder):
 
-Conditional breakpoints enable you to break execution on a particular line of code only when the value of the conditional is true. To set a conditional breakpoint, right-click on an existing breakpoint and select __Edit Breakpoint__, this opens a small peek window where you can enter the condition that must evaluate to true in order for the breakpoint to activate and break execution.
+```bash
+mkdir HelloWorld
+cd HelloWorld
+code .
+```
 
-![A conditional break](images/cpp/condbreak.png)
+Now create a new file called `helloworld.cpp` with the **New File** button in the File Explorer or **File** > **New File** command.
 
-In the editor, conditional breakpoints are indicated by a breakpoint symbol that has a black equals sigh inside of it. You can place the cursor over a conditional breakpoint to show its condition.
+![File Explorer New File button](images/cpp/new-file.png)
 
-### Function Breakpoints
+![helloworld.cpp file](images/cpp/hello-world-cpp.png)
 
-Function breakpoints enable you to break execution at the beginning of a function rather than on a particular line of code. To set a function breakpoint, on the __Debug Panel__, right click inside the __Breakpoints__ pane, then choose __Add Function Breakpoint__ and enter the name of the function on which you want to break execution.
+### Add Hello World source code
 
-### Expression evaluation
+Now paste in this source code:
 
-VS Code supports expression evaluation in several contexts:
+```cpp
+#include <iostream>
 
-* You can type an expression into the __Watch__ pane and it will be evaluated each time a breakpoint is hit.
-* You can type an expression into the __Debug Console__ and it will be evaluated only once.
-* You can evaluate any expression that appears in your code while you're stopped at a breakpoint.
+using namespace std;
 
-Note that expressions in the Watch Pane take effect in the application being debugged; an expression that modifies the value of a variable will modify that variable for the duration of the program.
+int main()
+{
+    cout << "Hello World" << endl;
+}
+```
 
-### Core Dump debugging
+Now press `kb(workbench.action.files.save)` to save the file. You can also enable [Auto Save](/docs/editor/codebasics.md#saveauto-save) to automatically save your file changes, by checking **Auto Save** in the main **File** menu.
 
-The C/C++ extension for VS Code also has the ability to debug using a memory dump. To debug using a memory dump, open your launch.json file for editing and add the `coreDumpPath` property to the __C++ Launch__ configuration, setting its value to be a string containing the path to the core dump. This will even work for multi-threaded programs and x86 programs being debugged on an x64 machine.
+### Build Hello World
 
-### GDB and MI commands
+Now that we have a simple C++ program, let's build it. Select the **Terminal** > **Run Build Task** command (`kb(workbench.action.tasks.build)`) from the main menu.
 
-You can execute GDB or MI commands directly through the debug console with the `-exec` command, but be careful -- executing GDB commands directly in the debug console is untested and might crash VS Code in some cases. For more information on debugging with VS Code, see this introduction to [debugging in VS Code](/docs/editor/debugging.md).
+![Run Build Task menu option](images/cpp/run-build-task.png)
 
-### Other Debugging Features
-* Unconditional breakpoints
-* Watch window
-* Call stack
-* Stepping
+This will display a dropdown with various compiler task options. If you are using a GCC toolset like MinGW, you would choose **C/C++: g++.exe build active file**.
 
-## Known limitations
+![Select g++.exe task](images/cpp/select-gpp-task.png)
 
-### Symbols and Code Navigation
+This will compile `helloworld.cpp` and create an executable file called `helloworld.exe`, which will appear in the File Explorer.
 
-All platforms:
+![helloworld.exe in the File Explorer](images/cpp/hello-world-exe.png)
 
-* Because the extension doesn't parse function bodies, Peek Definition and Go to Definition don't work for symbols defined inside the body of a function. 
+### Run Hello World
 
-### Debugging
+From a command prompt or a new VS Code Integrated Terminal, you can now run your program by typing ".\helloworld".
 
-Windows:
+![Run hello world in the VS Code Integrated Terminal](images/cpp/run-hello-world.png)
 
-* Debugging is not currently supported on Windows.
+If everything is set up correctly, you should see the output "Hello World".
 
-Linux:
+This has been a very simple example to help you get started with C++ development in VS Code. The next step is to try one of the tutorials listed below on your platform (Windows, Linux, or macOS) with your preferred toolset (GCC, Clang, Microsoft C++) and learn more about the Microsoft C/C++ extension's language features such as IntelliSense, code navigation, build configuration, and debugging.
 
-* Ubuntu 14.04 64-bit is the only version of Linux supported by the script that performs additional install steps on Linux. Other versions of Linux might work if you perform these steps manually, but you might need to modify them for your version of Linux. For more information on these steps, see _Manual Installation for the C++ Debugger extension_ in the [README](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools).
-* GDB needs elevated permissions in order to attach to a process. When using *attach to process*, you need to provide your password before the debugging session can begin. 
+## Tutorials
 
-OS X:
+Get started with C++ and VS Code with tutorials for your environment:
 
-* Additional install steps need to be completed manually to enable debugging on OS X. See _Manual Installation for the C++ Debugger extension_ in the [README](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools).
-* *Launch process* is not currently supported on OS X.
-* No additional terminal is provided for programs that already display a terminal, and the GDB shell is not available for those applications.
+- [GCC on Windows via MinGW](/docs/cpp/config-mingw.md)
+- [Microsoft C++ on Windows](/docs/cpp/config-msvc.md)
+- [GCC on Linux](/docs/cpp/config-linux.md)
+- [GCC on Windows Subsystem For Linux](/docs/cpp/config-wsl.md)
+- [Clang/LLVM on macOS](/docs/cpp/config-clang-mac.md)
+- [CMake Tools on Linux](/docs/cpp/cmake-linux.md)
 
-## Next Steps
+## Documentation
 
-Read on to find out about:
+You can find more documentation on using the Microsoft C/C++ extension under the [C++ section](/docs/cpp) of the VS Code website, where you'll find topics on:
 
-* [Editing Evolved](/docs/editor/editingevolved.md) - find out more about advanced editing features
-* [Tasks](/docs/editor/tasks.md) - use tasks to build your project and more
-* [Debugging](/docs/editor/debugging.md) - find out how to use the debugger with your project
+- [Debugging](/docs/cpp/cpp-debug.md)
+- [Editing](/docs/cpp/cpp-ide.md)
+- [Settings](/docs/cpp/customize-default-settings-cpp.md)
+- [FAQ](/docs/cpp/faq-cpp.md)
 
-## Common Questions
+![C++ TOC on code.visualstudio.com](images/cpp/cpp-toc.png)
 
-**Q: Which versions of Linux support debugging?**
+## Remote Development
 
-**A:** In this release our Linux install script targets Ubuntu 14.04 64-bit, therefore its the only version of Linux that officially supports debugging. Other versions of Linux might work if you perform the steps found in the script, but you might need to modify them for your version of Linux. For more information on these steps, see _Manual Installation for the C++ Debugger extension_ in the [README](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools).
+VS Code and the C++ extension support [Remote Development](/docs/remote/remote-overview.md) allowing you to work over SSH on a remote machine or VM, inside a Docker container, or in the [Windows Subsystem for Linux](https://docs.microsoft.com/windows/wsl) (WSL).
 
-**Q: Why do I need provide my password to complete installation of the extension on Linux?**
+To install support for Remote Development:
 
-**A:** VS Code takes a dependency on [dotnet cli](http://dotnet.github.io/) to enable debugging support on Linux. Root access is required to install the dotnet cli package. Normally these steps are performed by a script we've provided, but you can perform the steps manually if you prefer not to run the script with elevated permissions. 
+1. Install the VS Code [Remote Development Extension Pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack).
+1. If the remote source files are hosted in WSL, use the **Remote - WSL** extension.
+1. If you are connecting to a remote machine with SSH, use the **Remote - SSH** extension.
+1. If the remote source files are hosted in a container (for example, Docker), use the **Remote - Containers** extension.
 
-**Q: My project won't load.**
+## Feedback
 
-**A:** VS Code doesn't currently support C++ project files, instead it considers a directory of your choosing to be the workspace of your project. Source code files inside that directory and its sub-directories are part of the workspace.
-
-**Q: IntelliSense isn't working.**
-
-**A:** In this release, IntelliSense isn't supported. We plan to enable this and other features in future releases.
-
-**Q: How do I build/run my project?**
-
-**A:** VS Code supports tasks that you can configure to build your application, and natively understands the output of MSBuild, CSC, and XBuild. For more information, see the [Tasks](/docs/editor/tasks.md) documentation.
-
+If you run into any issues or have suggestions for the Microsoft C/C++ extension, please file [issues and suggestions on GitHub](https://github.com/microsoft/vscode-cpptools/issues). If you haven't already provided feedback, please take this [quick survey](https://www.research.net/r/VBVV6C6) to help shape this extension for your needs.
