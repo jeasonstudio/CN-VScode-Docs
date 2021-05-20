@@ -12,40 +12,62 @@ MetaSocialImage: images/cpp/languages_cpp.png
 
 C/C++ support for Visual Studio Code is provided by a [Microsoft C/C++ extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) to enable cross-platform C and C++ development on Windows, Linux, and macOS.
 
+[Microsoft C / C ++扩展]（https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools）提供了对Visual Studio Code的C / C ++支持，从而可以在以下平台上进行跨平台的C和C ++开发： Windows，Linux和macOS。
+
 ![cpp extension](images/cpp/cpp-extension.png)
 
 ## Install the extension
+## 安装扩展
 
 1. Open VS Code.
 1. Select the Extensions view icon on the Activity bar or use the keyboard shortcut (`kb(workbench.view.extensions)`).
-1. Search for `'C++'`.
-1. Select **Install**.
+
+2.选择活动栏上的扩展视图图标或使用键盘快捷键（`kb（workbench.view.extensions）`）。
+
+3. Search for `'C++'`.
+4. Select **Install**.
 
 ![Search for c++ in the Extensions view](images/cpp/search-cpp-extension.png)
 
 After you install the extension, when you open or create a `*.cpp` file, you will have syntax highlighting (colorization), smart completions and hovers (IntelliSense), and error checking.
 
+安装扩展程序后，打开或创建`* .cpp`文件时，将具有语法高亮显示（着色），智能补全和悬停（IntelliSense）以及错误检查。
+
 ![C++ language features](images/cpp/msg-intellisense.png)
 
 ## Install a compiler
+## 安装一个编译器
 
 C++ is a compiled language meaning your program's source code must be translated (compiled) before it can be run on your computer. VS Code is first and foremost an editor, and relies on command-line tools to do much of the development workflow. The C/C++ extension does not include a C++ compiler or debugger. You will need to install these tools or use those already installed on your computer.
 
+C ++是一种编译语言，这意味着您的程序的源代码必须先经过翻译（编译），然后才能在计算机上运行。 VS Code首先是编辑器，并且依靠命令行工具来完成大部分开发工作流程。 C / C ++扩展不包括C ++编译器或调试器。 您将需要安装这些工具或使用计算机上已经安装的工具。
+
 There may already be a C++ compiler and debugger provided by your academic or work development environment. Check with your instructors or colleagues for guidance on installing the recommended C++ toolset (compiler, debugger, project system, linter).
+
+您的学术或工作开发环境可能已经提供了C ++编译器和调试器。 请与您的导师或同事联系，以获取有关安装推荐的C ++工具集（compiler，debugger，project system，linter）的指导。
 
 Some platforms, such as Linux or macOS, have a C++ compiler already installed. Most Linux distributions have the [GNU Compiler Collection](https://wikipedia.org/wiki/GNU_Compiler_Collection) (GCC) installed and macOS users can get the [Clang](https://wikipedia.org/wiki/Clang) tools with [XCode](https://developer.apple.com/xcode/).
 
+某些平台，例如Linux或macOS，已经安装了C ++编译器。 大多数Linux发行版都安装了[GNU编译器集合]（https://wikipedia.org/wiki/GNU_Compiler_Collection）（GCC），并且macOS用户可以获取[Clang]（https://wikipedia.org/wiki/Clang）工具 使用[XCode]（https://developer.apple.com/xcode/）。
+
 ### Check if you have a compiler installed
+### 检查您是否安装了编译器
 
 Make sure your compiler executable is in your platform path (`%PATH` on Windows, `$PATH` on Linux and macOS) so that the C/C++ extension can find it. You can check availability of your C++ tools by opening the Integrated Terminal (`kb(workbench.action.terminal.toggleTerminal)`) in VS Code and trying to directly run the compiler.
 
+确保编译器可执行文件在平台路径中（在Windows中为`％PATH`，在Linux和macOS中为`$ PATH`），以便C / C ++扩展可以找到它。 您可以通过在VS Code中打开集成终端（“ kb（workbench.action.terminal.toggleTerminal）”）并尝试直接运行编译器来检查C ++工具的可用性。
+
 Checking for the GCC compiler `g++`:
+
+检查GCC编译器 `g++`：
 
 ```bash
 g++ --version
 ```
 
 Checking for the Clang compiler `clang`:
+
+检查Clang编译器`clang`：
 
 ```bash
 clang --version
