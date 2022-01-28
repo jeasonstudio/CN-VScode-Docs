@@ -1,8 +1,10 @@
 # 开始（Getting Started）
 
-Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, OS X and Linux. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages (C++, C#, Python, PHP) and runtimes.
+Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux.
+ It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages (such as C++, C#, Java, Python, PHP, Go) and runtimes (such as .NET and Unity). 
+Begin your journey with VS Code with these ![introductory videos](https://code.visualstudio.com/docs/getstarted/introvideos).
 
-Visual Studio Code 是一个运行在桌面上，并且可用于Windows，Mac OS X和Linux平台的的轻量级且功能强大的源代码编辑器。它配备了内置的JavaScript的，TypeScript和Node.js的支持，并具有其他语言（C ++，C＃，Python和PHP）的扩展以及一个丰富的生态系统。
+Visual Studio Code是一个轻量级且功能强大的源代码编辑器，可在桌面上运行，适用于Windows，macOS和Linux。它内置了对JavaScript、TypeScript和Node.js的支持，并为其他语言(如c++、c#、Java、Python、PHP、Go)和运行时(如. net和Unity)提供了丰富的扩展生态系统。通过这些![介绍性视频](https://code.visualstudio.com/docs/getstarted/introvideos)开始您的VS Code之旅。
 
 # Visual Studio Code的应用（Visual Studio Code in Action）
 
