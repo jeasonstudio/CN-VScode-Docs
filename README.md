@@ -96,6 +96,8 @@ Visual Studio Code 是微软推出的跨平台编辑器。它采用经典的VS�
   * ~~[TypeScript](https://code.visualstudio.com/docs/languages/typescript)~~
   * ~~[CSS, Sass and Less](https://code.visualstudio.com/docs/languages/css)~~
   * ~~[Dockerfile](https://code.visualstudio.com/docs/languages/dockerfile)~~
+  * ~~[Go](https://code.visualstudio.com/docs/languages/go)~~
+
 
 * RUNTIMES
   * ~~[Node.js](https://code.visualstudio.com/docs/runtimes/nodejs)~~
@@ -157,7 +159,7 @@ Visual Studio Code 是微软推出的跨平台编辑器。它采用经典的VS�
 - [ichengde](https://github.com/ichengde)
 - [bee0060](https://github.com/bee0060)
 - [nanci](https://github.com/guonanci)
-
+- [reedthink](https://github.com/reedthink)
 
 （Fork 之后自行添加到最后）
 
